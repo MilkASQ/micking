@@ -53,20 +53,10 @@
     data() {
       return {
         loading: false
-
       }
     },
-    created() {
-      this.closeLoad();
-    },
-    methods: {
-      closeLoad (){
-        // 关闭loading
-        setTimeout(() => {
-          this.loading = false;
-        }, 2000);
-      }
-    }
+    created() {},
+    methods: {}
   }
 </script>
 

@@ -13,9 +13,7 @@ let routes = [
     component: function (resolve) {
       require(['@/components/login'], resolve)
     },
-    meta: {
-      requireAuth: false
-    }
+    meta: {requireAuth: false}
   },
   {
     path: '/index',
@@ -23,9 +21,7 @@ let routes = [
     component: function (resolve) {
       require(['@/components/home'], resolve)
     },
-    meta: {
-      requireAuth: false
-    }
+    meta: {requireAuth: false}
   },
   {
     path: '/invest/:id',
@@ -33,19 +29,15 @@ let routes = [
     component: function (resolve) {
       require(['@/components/index/invest'], resolve)
     },
-    meta: {
-      requireAuth: false
-    }
+    meta: {requireAuth: false}
   },
   {
     path: '/uc',
     name: 'UC', // 会员中心
     component: function (resolve) {
-      require(['@/components/uc/index/index'], resolve)
+      require(['@/components/uc/index'], resolve)
     },
-    meta: {
-      requireAuth: true
-    }
+    meta: {requireAuth: true}
   },
   {
     path: '/uc/safe',
@@ -60,27 +52,38 @@ let routes = [
   },
   {
     path: '/uc/safe/phone',
-    name: 'CHANGE_PHONE', // 更改手机号
+    name: 'CHANGE_PHONE', // 修改手机号->选项页面
     component: function (resolve) {
       require(['@/components/uc/safe/phone'], resolve)
     },
-    meta: {
-      requireAuth: true
-    }
+    meta: {requireAuth: true}
   },
   {
     path: '/uc/safe/has_phone',
-    name: 'CHANGE_HAS_PHONE', // 更改手机号
+    name: 'CHANGE_HAS_PHONE', // 修改手机号->身份信息验证
     component: function (resolve) {
-      require(['@/components/uc/safe/has_phone'], resolve)
+      require(['@/components/uc/safe/hasphone'], resolve)
     },
-    meta: {
-      requireAuth: true
-    }
+    meta: {requireAuth: true}
   },
   {
-    path: '*',
-    redirect: (to) => {
+    path: '/uc/safe/not_phone',
+    name: 'CHANGE_NOT_PHONE', // 修改手机号->身份信息验证
+    component: function (resolve) {
+      require(['@/components/uc/safe/notphone'], resolve)
+    },
+    meta: {requireAuth: true}
+  },
+  {
+    path: '/uc/safe/change_phone',
+    name: 'CHANGE_USER_PHONE', // 修改手机号
+    component: function (resolve) {
+      require(['@/components/uc/safe/notphone'], resolve)
+    },
+    meta: {requireAuth: true}
+  },
+  {
+    path: '*', redirect: (to) => {
       // 动态设置重定向的目标
       // 目标路由对象，就是访问的路径的路由信息
       if (to.path === '/invest') {

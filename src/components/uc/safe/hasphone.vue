@@ -47,16 +47,9 @@
       }
     },
     created() {
-      this.closeLoad();
       this.setPhone();
     },
     methods: {
-      closeLoad() {
-        // 关闭loading
-        setTimeout(() => {
-          this.loading = false;
-        }, 2000);
-      },
       submit() {
         let data = {verify: this.verify, phone: this.phone};
         if (unit.checkPhone(this.phone) === false) {
@@ -93,7 +86,6 @@
             v.show_btn = false;
           }
         }
-
       },
       setPhone() {
         this.changephone = unit.substrPhone(this.phone);

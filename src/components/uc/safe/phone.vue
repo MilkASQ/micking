@@ -7,7 +7,7 @@
         <i class="iconFont">&#xe611;</i>
         <i class="a999">185****7357</i>
       </router-link>
-      <router-link :to="{name:''}">
+      <router-link :to="{name:'CHANGE_NOT_PHONE'}">
         <span>原手机接收不到短信信息</span>
         <i class="iconFont">&#xe611;</i>
       </router-link>

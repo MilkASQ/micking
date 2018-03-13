@@ -2,17 +2,15 @@
   <main>
     <v-head title="验证信息" :url="{name:'CHANGE_PHONE'}" rightUrl="" status="false" rightTxt=""></v-head>
     <section class="changePhone">
-      <div class="top_tips">
-        <span class="a666">点击“获取验证码”，将发送短信验证码到您的手机</span>
-        <div class="phone">{{ changephone }}</div>
-      </div>
       <div class="public_form">
         <ul>
           <li>
-            <span class="txt">短信验证码</span>
-            <input type="tel" name="" v-model="verify" maxlength="6" placeholder="请输入短信验证码"/>
-            <button class="btn" v-if="show_btn" @click="sendMessage" :disabled="disabled">获取验证码</button>
-            <button class="btn over" :disabled="disabled" v-else>{{ count_down }}s重发</button>
+            <span class="txt">身份证号</span>
+            <input type="tel" name="idcard" v-model="id_card" maxlength="18" placeholder="请输入身份证号"/>
+          </li>
+          <li>
+            <span class="txt">银行卡号</span>
+            <input type="tel" name="card_id" v-model="card_id" maxlength="19" placeholder="请输入银行卡号"/>
           </li>
         </ul>
       </div>
@@ -38,66 +36,24 @@
     },
     data() {
       return {
-        verify: null,
-        phone: '18500007357',
-        changephone: '',
-        count_down: null,
-        show_btn: true,
-        disabled: false
+        id_card: 450321199006277012,
+        card_id: 1234567891234567,
       }
     },
-    created() {
-      this.closeLoad();
-      this.setPhone();
-    },
+    created() {},
     methods: {
-      closeLoad() {
-        // 关闭loading
-        setTimeout(() => {
-          this.loading = false;
-        }, 2000);
-      },
       submit() {
-        let data = {verify: this.verify, phone: this.phone};
-        if (unit.checkPhone(this.phone) === false) {
-          Toast('手机号码格式不正确');
+        let data = {id_card: this.id_card, card_id: this.card_id};
+        if (unit.checkIdCade(this.id_card) === false) {
+          Toast('身份证号码格式不正确');
           return false;
         }
-        if (unit.msgVerify(this.verify) === false) {
-          Toast('短信验证码格式不正确');
+        if (unit.bankCode(this.card_id) === false) {
+          Toast('银行卡号格式不正确');
           return false;
         }
         alert("测试成功");
-      },
-      sendMessage() {
-
-        let v = this;
-        if (unit.checkPhone(this.phone) === false) {
-          Toast('手机号码格式不正确');
-          return false;
-        }
-
-        // 定时器函数
-        v.count_down = 60;
-        v.disabled = true;
-        let hh = setInterval(doString, 1000);
-        let data = {verify: this.verify, phone: this.phone};
-
-        function doString() {
-          if (v.count_down === 0) {
-            clearInterval(hh);
-            v.disabled = false;
-            v.show_btn = true;
-          } else {
-            v.count_down = v.count_down - 1;
-            v.show_btn = false;
-          }
-        }
-
-      },
-      setPhone() {
-        this.changephone = unit.substrPhone(this.phone);
-      },
+      }
     }
   }
 </script>
