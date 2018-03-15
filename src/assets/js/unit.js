@@ -48,4 +48,11 @@ function checkIdCade(v) {
   return false;
 }
 
-export {checkPhone, subStrPhone, msgVerify, bankCode, checkIdCade}
+// 验证手机号码
+function subStrString(v, l) {
+  v = v.toString();
+  let m = v.substr(v.length - l, l);
+  return m;
+}
+
+export {checkPhone, subStrPhone, msgVerify, bankCode, checkIdCade, subStrString}

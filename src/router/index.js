@@ -59,7 +59,7 @@ let routes = [
     meta: {requireAuth: true},
     children : [
       {
-        path: '/uc/safe/phone/index',
+        path: '/uc/safe/has_phone',
         name: 'CHANGE_YES_PHONE', // 修改手机号->身份信息验证
         component: function (resolve) {
           require(['@/components/uc/safe/hasphone'], resolve)
@@ -67,7 +67,7 @@ let routes = [
         meta: {requireAuth: true}
       },
       {
-        path: '/uc/safe/phone/not_phone',
+        path: '/uc/safe/not_phone',
         name: 'CHANGE_NOT_PHONE', // 修改手机号->身份信息验证
         component: function (resolve) {
           require(['@/components/uc/safe/notphone'], resolve)
@@ -77,7 +77,7 @@ let routes = [
     ]
   },
   {
-    path: '/uc/safe/phone/change_phone',
+    path: '/uc/safe/change_phone',
     name: 'CHANGE_USER_PHONE', // 修改手机号
     component: function (resolve) {
       require(['@/components/uc/safe/changephone'], resolve)
@@ -97,6 +97,14 @@ let routes = [
     name: 'PAY_PASS', // 支付密码
     component: function (resolve) {
       require(['@/components/uc/safe/pay_pass'], resolve)
+    },
+    meta: {requireAuth: true}
+  },
+  {
+    path: '/uc/bank/card',
+    name: 'CARD', // 银行卡
+    component: function (resolve) {
+      require(['@/components/uc/bank/card'], resolve)
     },
     meta: {requireAuth: true}
   },

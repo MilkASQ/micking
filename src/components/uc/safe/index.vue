@@ -17,7 +17,7 @@
         <i class="iconFont">&#xe611;</i>
         <i class="af60">修改</i>
       </router-link>
-      <router-link to="/">
+      <router-link :to="{name:'CARD'}">
         <span>银行卡信息</span>
         <i class="iconFont">&#xe611;</i>
         <i class="a333">查看</i>
