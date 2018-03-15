@@ -12,8 +12,10 @@
         <li>
           <div class="name">密码</div>
           <div class="right">
-            <input type="password" maxlength="16" v-if="passwordType == false" v-model="model.password" autocomplete="off" placeholder="请输入8-16位密码" value=""/>
-            <input type="text" maxlength="16" v-if="passwordType == true" v-model="model.password" autocomplete="off" placeholder="请输入8-16位密码" value=""/>
+            <input type="password" maxlength="16" v-if="passwordType == false" v-model="model.password"
+                   autocomplete="off" placeholder="请输入8-16位密码" value=""/>
+            <input type="text" maxlength="16" v-if="passwordType == true" v-model="model.password" autocomplete="off"
+                   placeholder="请输入8-16位密码" value=""/>
             <div class="button_line">
             <span class="delete_btn" v-if="model.password.length >= 6" @click="deletePass"><i
               class="iconFont">&#xe60d;</i></span>
@@ -36,7 +38,7 @@
   import head from "./head.vue"
   import * as types from '../store/type'
 
-  import { Toast } from 'mint-ui';
+  import {Toast} from 'mint-ui';
 
   import CryptoJS from 'crypto-js'
   import MD5 from 'crypto-js/md5'
@@ -81,19 +83,19 @@
           let data = JSON.stringify(this.model);
           let md5token = MD5(JSON.stringify(this.model)).toString(CryptoJS.enc.Hex);
           let aestoken = CryptoJS.AES.encrypt(data, key).toString();
-          let val = CryptoJS.AES.decrypt(aestoken,key).toString(CryptoJS.enc.Utf8);
+          let val = CryptoJS.AES.decrypt(aestoken, key).toString(CryptoJS.enc.Utf8);
 
           // 设置 token&userinfo
           this.$store.commit(types.USERINFO, this.model);
           this.$store.commit(types.LOGIN, md5token);
 
           let popus = Toast({message: '登录成功'});
-          setTimeout(()=>{
+          setTimeout(() => {
             popus.close();
             //或者跳转链接
             let form = decodeURIComponent(this.$route.query.redirect || '/index');
             this.$router.push(form);
-          },2000);
+          }, 2000);
         }
       }
     }
@@ -104,19 +106,19 @@
   .login {
     width: 20rem;
     margin-top: 0.6rem;
-    .buttonWrap{
+    .buttonWrap {
       padding: 1rem;
     }
-    ul{
+    ul {
       background: #fff;
-      li{
+      li {
         overflow: hidden;
         padding: 0 0.6rem;
         background: #fff;
         height: 2.6rem;
         line-height: 2.6rem;
         border-bottom: 1px solid #eee;
-        .name{
+        .name {
           width: 5rem;
           float: left;
           color: #666;
@@ -132,7 +134,7 @@
             background: #f6f6f6;
           }
         }
-        .right{
+        .right {
           width: 13.8rem;
           float: left;
           position: relative;

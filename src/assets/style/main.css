@@ -31,3 +31,36 @@
 .menuList a span{font-size: 0.75rem; color: #333; float: left;}
 .menuList a i{font-size: 0.75rem; float: right; padding-left: 0.3125rem;}
 .menuList a i.iconFont{color: #999; font-size: 0.625rem;}
+
+.showsList{ width: 20rem; overflow: hidden;}
+.showsList .topTips{ width: 20rem; text-align: center; padding: 0.6rem; font-size: 0.75rem;}
+.showsList .topTips .iconFont{ margin-right: 0.125rem;}
+.showsList .listing{background: #fff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 0 0.6rem;}
+.showsList .listing li{ height: 2.2rem; line-height: 2.2rem; border-bottom: 1px solid #eee; overflow: hidden; font-size: 0.75rem; color: #666;}
+.showsList .listing li:last-child{border-bottom: 0;}
+.showsList .listing li .txt{float: left;}
+.showsList .listing li .intro{float: right;}
+
+/*tab*/
+.menuTab{ width: 20rem; height: 2.4rem; line-height: 2.4rem; background: #fff; border-bottom: 1px solid #eee; font-size: 0.75rem; display: flex;  display: -webkit-flex; display: -ms-flex;}
+.menuTab a{color: #333; display: inline-block; flex: 1; text-align: center; position: relative;}
+.menuTab a:after{content: ''; height: 1.4rem; width: 1px; position: absolute; top: 0.5rem; right: 0; display: block; background: #eee;}
+.menuTab a:last-child:after{display: none;}
+.menuTab a.on{color: #f60;}
+.menuTab a.on:before{content: ''; display: block; width: 25%; position: absolute; height: 1px; bottom: 0; left: 37.5%; background: #f60;}
+
+/*手机号*/
+.changePhone {  width: 20rem; height: auto;  overflow: hidden; padding-top: 0.6rem;}
+.changePhone .top_tips { padding: 0 0.6rem 0.6rem 0.6rem;  font-size: 0.8rem;  text-align: center;}
+.changePhone .top_tips .phone{  font-size: 1.6rem;  line-height: 3rem;  }
+
+/*form*/
+.public_form { background: #fff;  border-top: 1px solid #eee;  border-bottom: 1px solid #eee;}
+.public_form ul {  overflow: hidden;}
+.public_form ul li {  height: 2.8rem;  line-height: 2.8rem;  border-bottom: 1px solid #eee;  padding: 0 0.6rem;  font-size: 0.75rem;  position: relative;}
+.public_form ul li:last-child {  border-bottom: 0;  }
+.public_form ul li .txt { width: 5rem;  display: block;  float: left;  }
+.public_form ul li .verifyimg{ position: absolute; top: 0.2rem; right: 0.6rem; width: 5.12rem; height: 2rem; line-height: 2rem; background: #eee; color: #fff; z-index: 10; margin-top: 0.2rem;  }
+.public_form ul li input,.public_form ul li  button ,.public_form ul li  select{ width: 13.8rem; border: 0; height: 1.6rem; border-left: 1px solid #eee; padding-left: 0.6rem;}
+.public_form ul li input.btn,.public_form ul li  button.btn {  position: absolute;  top: 0.2rem;  right: 0.6rem;  width: auto;  height: 2rem;  line-height: 2rem;  background: #f60;  border-radius: 1.6rem;  padding: 0 0.8rem;  color: #fff;  z-index: 10;  margin-top: 0.2rem;}
+.public_form ul li input.btn.over,.public_form ul li  button.btn.over { background: #bbb;  }

@@ -1,7 +1,9 @@
 <template>
   <main>
     <mt-swipe :auto="4000" class="banner">
-      <mt-swipe-item v-for="item in banner" :key="item.id"><router-link :to="item.link"><img :src="item.url" :alt="item.title"></router-link></mt-swipe-item>
+      <mt-swipe-item v-for="item in banner" :key="item.id">
+        <router-link :to="item.link"><img :src="item.url" :alt="item.title"></router-link>
+      </mt-swipe-item>
     </mt-swipe>
 
     <section class="notice">

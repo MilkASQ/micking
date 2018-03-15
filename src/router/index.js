@@ -56,41 +56,59 @@ let routes = [
     component: function (resolve) {
       require(['@/components/uc/safe/phone'], resolve)
     },
-    meta: {requireAuth: true}
+    meta: {requireAuth: true},
+    children : [
+      {
+        path: '/uc/safe/phone/index',
+        name: 'CHANGE_YES_PHONE', // 修改手机号->身份信息验证
+        component: function (resolve) {
+          require(['@/components/uc/safe/hasphone'], resolve)
+        },
+        meta: {requireAuth: true}
+      },
+      {
+        path: '/uc/safe/phone/not_phone',
+        name: 'CHANGE_NOT_PHONE', // 修改手机号->身份信息验证
+        component: function (resolve) {
+          require(['@/components/uc/safe/notphone'], resolve)
+        },
+        meta: {requireAuth: true}
+      }
+    ]
   },
   {
-    path: '/uc/safe/has_phone',
-    name: 'CHANGE_HAS_PHONE', // 修改手机号->身份信息验证
-    component: function (resolve) {
-      require(['@/components/uc/safe/hasphone'], resolve)
-    },
-    meta: {requireAuth: true}
-  },
-  {
-    path: '/uc/safe/not_phone',
-    name: 'CHANGE_NOT_PHONE', // 修改手机号->身份信息验证
-    component: function (resolve) {
-      require(['@/components/uc/safe/notphone'], resolve)
-    },
-    meta: {requireAuth: true}
-  },
-  {
-    path: '/uc/safe/change_phone',
+    path: '/uc/safe/phone/change_phone',
     name: 'CHANGE_USER_PHONE', // 修改手机号
     component: function (resolve) {
-      require(['@/components/uc/safe/notphone'], resolve)
+      require(['@/components/uc/safe/changephone'], resolve)
+    },
+    meta: {requireAuth: true}
+  },
+  {
+    path: '/uc/safe/idcard',
+    name: 'IDCARD', // 身份认证
+    component: function (resolve) {
+      require(['@/components/uc/safe/idcard'], resolve)
+    },
+    meta: {requireAuth: true}
+  },
+  {
+    path: '/uc/safe/pay_pass',
+    name: 'PAY_PASS', // 支付密码
+    component: function (resolve) {
+      require(['@/components/uc/safe/pay_pass'], resolve)
     },
     meta: {requireAuth: true}
   },
   {
     path: '*', redirect: (to) => {
-      // 动态设置重定向的目标
-      // 目标路由对象，就是访问的路径的路由信息
-      if (to.path === '/invest') {
-        return '/invest/1'
-      }
-      return '/index'
+// 动态设置重定向的目标
+// 目标路由对象，就是访问的路径的路由信息
+    if (to.path === '/invest') {
+      return '/invest/1'
     }
+    return '/index'
+  }
   }
 ];
 

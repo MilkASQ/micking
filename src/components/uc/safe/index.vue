@@ -2,17 +2,17 @@
   <main>
     <v-head title="安全中心" :url="{name:'UC'}" rightUrl="" status="false" rightTxt=""></v-head>
     <section class="menuList">
-      <router-link :to="{name:'CHANGE_PHONE'}">
+      <router-link :to="{name:'CHANGE_YES_PHONE'}">
         <span>手机号</span>
         <i class="iconFont">&#xe611;</i>
         <i class="a999">185****7357</i>
       </router-link>
-      <router-link to="/">
+      <router-link :to="{name:'IDCARD'}">
         <span>实名认证</span>
         <i class="iconFont">&#xe611;</i>
         <i class="a999">已认证</i>
       </router-link>
-      <router-link to="/">
+      <router-link :to="{name:'PAY_PASS'}">
         <span>支付密码</span>
         <i class="iconFont">&#xe611;</i>
         <i class="af60">修改</i>
@@ -55,7 +55,8 @@
         loading: false
       }
     },
-    created() {},
+    created() {
+    },
     methods: {}
   }
 </script>

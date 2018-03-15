@@ -10,7 +10,7 @@
 
 <script>
   export default {
-    props: ['title', 'url', 'rightUrl', 'status',"rightTxt"],
+    props: ['title', 'url', 'rightUrl', 'status', "rightTxt"],
     name: 'nav',
     data() {
       return {}

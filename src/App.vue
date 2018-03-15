@@ -17,10 +17,11 @@
   }
 </script>
 <style scoped lang="scss">
-  .fade-enter-active,.fade-leave-active {
+  .fade-enter-active, .fade-leave-active {
     transition: opacity 0.05s ease;
   }
-  .fade-enter,.fade-leave-active {
+
+  .fade-enter, .fade-leave-active {
     opacity: 0;
   }
 </style>

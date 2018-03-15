@@ -1,13 +1,18 @@
 <template>
   <main>
-    <!--<v-head title="验证信息" :url="{name:'CHANGE_PHONE'}" rightUrl="" status="false" rightTxt=""></v-head>-->
+    <v-head title="修改手机号" :url="{name:'CHANGE_PHONE'}" rightUrl="" status="false" rightTxt=""></v-head>
     <section class="changePhone">
-      <div class="top_tips">
-        <span class="a666">点击“获取验证码”，将发送短信验证码到您的手机</span>
-        <div class="phone">{{ changephone }}</div>
-      </div>
       <div class="public_form">
         <ul>
+          <li>
+            <span class="txt">新手机号</span>
+            <input type="tel" name="" v-model="phone" maxlength="6" placeholder="请输入新手机号"/>
+          </li>
+          <li>
+            <span class="txt">图形验证码</span>
+            <input type="tel" name="" v-model="img_verify" maxlength="6" placeholder="请输入图形验证码"/>
+            <img src="" class="verifyimg">
+          </li>
           <li>
             <span class="txt">短信验证码</span>
             <input type="tel" name="" v-model="verify" maxlength="6" placeholder="请输入短信验证码"/>
@@ -39,8 +44,8 @@
     data() {
       return {
         verify: null,
-        phone: '18500007357',
-        changephone: '',
+        img_verify: null,
+        phone: null,
         count_down: null,
         show_btn: true,
         disabled: false

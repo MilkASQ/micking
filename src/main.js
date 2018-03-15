@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import Mint from 'mint-ui';
 import "mint-ui/lib/style.css";
+
 Vue.use(Mint);
 
 import '@/assets/style/main.css';

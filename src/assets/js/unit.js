@@ -19,11 +19,14 @@ function checkPhone(v) {
   return true;
 }
 
-function substrPhone(v) {
+// 验证手机号码
+function subStrPhone(v) {
+  v = v.toString();
   let nPhone = v.split(v.substr(3, 4)).join("****");
   return nPhone;
 }
 
+// 验证6为数字
 function msgVerify(v) {
   if (!SexNumber.test(v)) {
     return false;
@@ -45,4 +48,4 @@ function checkIdCade(v) {
   return false;
 }
 
-export {checkPhone, substrPhone, msgVerify, bankCode, checkIdCade}
+export {checkPhone, subStrPhone, msgVerify, bankCode, checkIdCade}

@@ -1,18 +1,44 @@
 <template>
   <main>
-    <v-head title="验证信息" :url="{name:'CHANGE_PHONE'}" rightUrl="" status="false" rightTxt=""></v-head>
-    <section class="changePhone">
+    <v-head title="实名认证" :url="{name:'UC_SAFE'}" rightUrl="" status="false" rightTxt=""></v-head>
+    <section class="showsList" v-if="status">
+      <div class="topTips"><i class="iconFont agreen">&#xe618;</i>您已通过实名认证，如需帮助请联系客服</div>
+      <ul class="listing">
+        <li>
+          <span class="txt">真实姓名</span>
+          <div class="intro">{{name}}</div>
+        </li>
+        <li>
+          <span class="txt">身份证号</span>
+          <div class="intro">{{ idcard }}</div>
+        </li>
+      </ul>
+    </section>
+    <section class="changePhone" v-else>
       <div class="top_tips">
-        <span class="a666">点击“获取验证码”，将发送短信验证码到您的手机</span>
-        <div class="phone">{{ changephone }}</div>
+        <span class="a666">银行预留的手机号码必须与注册手机号一致！</span>
+        <div class="phone">{{ phone }}</div>
       </div>
       <div class="public_form">
         <ul>
           <li>
-            <span class="txt">短信验证码</span>
-            <input type="tel" name="" v-model="verify" maxlength="6" placeholder="请输入短信验证码"/>
-            <button class="btn" v-if="show_btn" @click="sendMessage" :disabled="disabled">获取验证码</button>
-            <button class="btn over" :disabled="disabled" v-else>{{ count_down }}s重发</button>
+            <span class="txt">真实姓名</span>
+            <input type="tel" name="" v-model="name" maxlength="6" placeholder="请输入真实姓名"/>
+          </li>
+          <li>
+            <span class="txt">身份证号</span>
+            <input type="tel" name="" v-model="idcard" maxlength="6" placeholder="请输入身份证号"/>
+          </li>
+          <li>
+            <span class="txt">银行卡号</span>
+            <input type="tel" name="" v-model="card_id" maxlength="6" placeholder="请输入银行卡号"/>
+          </li>
+          <li>
+            <span class="txt">开户银行</span>
+            <select name="bank_list">
+              <option v-for="tos in bank_list">{{ tos.b_name }}</option>
+            </select>
+            <!--<input type="tel" name="" v-model="idcard" maxlength="6" placeholder="请输入短信验证码"/>-->
           </li>
         </ul>
       </div>
@@ -38,16 +64,21 @@
     },
     data() {
       return {
-        verify: null,
-        phone: '18500007357',
-        changephone: '',
-        count_down: null,
-        show_btn: true,
-        disabled: false
+        status: false,
+        name: null,
+        idcard: null,
+        phone: null,
+        card_id: null,
+        bank_list: [
+          {b_name: '中国银行', bank_code: '1'},
+          {b_name: '中国工商银行', bank_code: '2'},
+          {b_name: '建设银行', bank_code: '3'},
+          {b_name: '农业银行', bank_code: '4'}
+        ]
       }
     },
     created() {
-      this.setPhone();
+
     },
     methods: {
       submit() {
@@ -86,76 +117,11 @@
             v.show_btn = false;
           }
         }
-      },
-      setPhone() {
-        this.changephone = unit.substrPhone(this.phone);
-      },
+      }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  .changePhone {
-    width: 20rem;
-    height: auto;
-    overflow: hidden;
-    .top_tips {
-      padding: 0.6rem;
-      font-size: 0.8rem;
-      text-align: center;
-      .phone {
-        font-size: 1.8rem;
-        line-height: 3rem;
-      }
-    }
-  }
 
-  .public_form {
-    background: #fff;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    ul {
-      overflow: hidden;
-      li {
-        height: 2.8rem;
-        line-height: 2.8rem;
-        border-bottom: 1px solid #eee;
-        padding: 0 0.6rem;
-        font-size: 0.75rem;
-        position: relative;
-        &:last-child {
-          border-bottom: 0;
-        }
-        .txt {
-          width: 5rem;
-          display: block;
-          float: left;
-        }
-        input, button {
-          width: 13.8rem;
-          border: 0;
-          height: 1.6rem;
-          border-left: 1px solid #eee;
-          padding-left: 0.6rem;
-          &.btn {
-            position: absolute;
-            top: 0.2rem;
-            right: 0.6rem;
-            width: auto;
-            height: 2rem;
-            line-height: 2rem;
-            background: #f60;
-            border-radius: 1.6rem;
-            padding: 0 0.8rem;
-            color: #fff;
-            z-index: 10;
-            margin-top: 0.2rem;
-            &.over {
-              background: #bbb;
-            }
-          }
-        }
-      }
-    }
-  }
 </style>
