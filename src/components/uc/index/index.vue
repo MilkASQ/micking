@@ -35,7 +35,7 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/">
+          <router-link :to="{name:'INVEST_INDEX'}">
             <!--<i class="iconFont">&#xe608;</i>-->
             <span>投资记录</span>
             <i class="iconFont">&#xe611;</i>
@@ -44,7 +44,7 @@
         <li>
           <router-link to="/">
             <!--<i class="iconFont">&#xe608;</i>-->
-            <span>汇款日历</span>
+            <span>回款日历</span>
             <i class="iconFont">&#xe611;</i>
           </router-link>
         </li>

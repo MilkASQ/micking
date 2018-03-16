@@ -40,7 +40,7 @@
         real_name: '张三',
         bank_name: '工商银行',
         bank_card: '6222020000000001234',
-        last_bank_card: 1234
+        last_bank_card: null
       }
     },
     created() {

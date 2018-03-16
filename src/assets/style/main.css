@@ -82,3 +82,21 @@
 .bank_card_btm a.half,.bank_card_btm input.half{width: 50%; }
 .bank_card_btm a.half:first-child,.bank_card_btm input.half:first-child{border-right: 1px solid #eee;}
 
+/*投资记录*/
+.investedList{ width: 20rem; height: auto;padding-top: 0.6rem;}
+.investedList li{ width: 20rem; height: auto; margin-bottom: 0.6rem; background: #fff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 0 0.6rem;}
+.investedList li .top{height: 2rem; line-height: 2rem; border-bottom: 1px solid #eee; font-size: 0.875rem; overflow: hidden;}
+.investedList li .top .name{float: left;}
+.investedList li .top .time{float: right; font-size: 0.75rem; color: #999;}
+.investedList li .center{ padding: 0.6rem 0; display: flex;  display: -webkit-flex; display: -ms-flex;}
+.investedList li .center dl{flex: 1;}
+.investedList li .center dl dt{font-size: 0.625rem; color: #666; line-height: 1rem;}
+.investedList li .center dl dd{font-size: 1rem; color: #f60; height: 2rem; line-height: 2rem;}
+.investedList li .center dl dd span{font-size: 0.75rem; color: #666;}
+.investedList li .bottom{border-top: 1px solid #eee; height: 2.2rem; line-height: 2.2rem;}
+.investedList li .bottom a,.investedList li .bottom span{ display: inline-block;  font-size: 0.75rem;}
+.investedList li .bottom a.btn{ border: 1px solid #f60; height: 1.4rem; line-height: 1.4rem; margin-top: 0.4rem; vertical-align: middle; padding: 0 0.6rem; color: #f60;
+  -webkit-border-radius: 0.7rem;
+  -moz-border-radius: 0.7rem;
+  border-radius: 0.7rem;}
+.investedList li .bottom a.btn.over{ border: 1px solid #999; color: #999;}

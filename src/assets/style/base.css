@@ -108,7 +108,7 @@ footer { width: 20rem; height: 2.8rem; clear: both;}
 
 /*header*/
 header { width: 20rem; height: 2.5rem;}
-.header { width: 20rem; height: 2.5rem; background: #fff; border-bottom: 1px #ededed solid; position: relative; padding: 0 2.5rem; }
+.header { width: 20rem; height: 2.5rem; background: #fff; border-bottom: 1px #ededed solid; position: fixed; padding: 0 2.5rem; top: 0; left: 0; z-index: 10000;}
 .header .back_btn { width: 2.5rem; height: 2.5rem; font-size: 0.75rem; line-height: 2.5rem; text-align: center; position: absolute; left: 0; top: 0; color: #666;  }
 .header .center { font-size: 0.875rem; color: #333; text-align: center; line-height: 2.5rem; }
 .header .right_btn { width: auto; height: 2.5rem; padding: 0 0.5rem; font-size: 0.75rem; color: #666; text-align: center; line-height: 2.5rem; position: absolute; top: 0; right: 0; }

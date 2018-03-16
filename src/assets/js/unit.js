@@ -55,4 +55,12 @@ function subStrString(v, l) {
   return m;
 }
 
-export {checkPhone, subStrPhone, msgVerify, bankCode, checkIdCade, subStrString}
+// 验证手机号码
+function checkPassword(v) {
+  if (!myPwd.test(v)) {
+    return false;
+  }
+  return true;
+}
+
+export {checkPhone, subStrPhone, msgVerify, bankCode, checkIdCade, subStrString, checkPassword}

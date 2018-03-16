@@ -57,7 +57,7 @@ let routes = [
       require(['@/components/uc/safe/phone'], resolve)
     },
     meta: {requireAuth: true},
-    children : [
+    children: [
       {
         path: '/uc/safe/has_phone',
         name: 'CHANGE_YES_PHONE', // 修改手机号->身份信息验证
@@ -107,6 +107,56 @@ let routes = [
       require(['@/components/uc/bank/card'], resolve)
     },
     meta: {requireAuth: true}
+  },
+  {
+    path: '/uc/safe/password',
+    name: 'PASSWORD', // 修改密码
+    component: function (resolve) {
+      require(['@/components/uc/safe/password'], resolve)
+    },
+    meta: {requireAuth: true}
+  },
+  {
+    path: '/uc/invest/total',
+    name: 'INVEST', // 投资记录
+    component: function (resolve) {
+      require(['@/components/uc/invest/index'], resolve)
+    },
+    meta: {requireAuth: true},
+    children: [
+      {
+        path: '/uc/invest/index',
+        name: 'INVEST_INDEX', // 投资记录 全部
+        component: function (resolve) {
+          require(['@/components/uc/invest/total'], resolve)
+        },
+        meta: {requireAuth: true}
+      },
+      {
+        path: '/uc/invest/collect',
+        name: 'INVEST_COLLECT', // 投资记录 待收
+        component: function (resolve) {
+          require(['@/components/uc/invest/collect'], resolve)
+        },
+        meta: {requireAuth: true}
+      },
+      {
+        path: '/uc/invest/completed',
+        name: 'INVEST_COMPLETED', // 投资记录 已结清
+        component: function (resolve) {
+          require(['@/components/uc/invest/completed'], resolve)
+        },
+        meta: {requireAuth: true}
+      },
+      {
+        path: '/uc/invest/debt',
+        name: 'INVEST_DEBT', // 投资记录 已买入债权
+        component: function (resolve) {
+          require(['@/components/uc/invest/debt'], resolve)
+        },
+        meta: {requireAuth: true}
+      }
+    ]
   },
   {
     path: '*', redirect: (to) => {
