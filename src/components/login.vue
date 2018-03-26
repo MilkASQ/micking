@@ -43,6 +43,7 @@
   import CryptoJS from 'crypto-js'
   import MD5 from 'crypto-js/md5'
   import AES from 'crypto-js/aes'
+  import BASE64 from 'crypto-js/enc-base64'
 
 
   export default {
@@ -79,11 +80,25 @@
           Toast('请填写正确的信息');
         } else {
 
-          let key = "147258369";
+          let key = "ZXCVBNMKJHGFDSAQ";
+          let iv = "1234567890123456";
+
           let data = JSON.stringify(this.model);
           let md5token = MD5(JSON.stringify(this.model)).toString(CryptoJS.enc.Hex);
           let aestoken = CryptoJS.AES.encrypt(data, key).toString();
           let val = CryptoJS.AES.decrypt(aestoken, key).toString(CryptoJS.enc.Utf8);
+
+          /*
+          let srcs = CryptoJS.enc.Utf8.parse(data);
+          let encrypted = CryptoJS.AES.encrypt(srcs, key, {
+            iv: iv,
+            mode: CryptoJS.mode.CBC,
+            padding: CryptoJS.pad.Pkcs7
+          });
+          console.log(encrypted.toString());
+          encrypted.ciphertext.toString().toUpperCase();
+          */
+
 
           // 设置 token&userinfo
           this.$store.commit(types.USERINFO, this.model);
