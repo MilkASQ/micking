@@ -159,6 +159,40 @@ let routes = [
     ]
   },
   {
+    path: '/uc/card/index',
+    name: 'UC_CARD', // 修改手机号->选项页面
+    component: function (resolve) {
+      require(['@/components/uc/card/card'], resolve)
+    },
+    meta: {requireAuth: true},
+    children: [
+      {
+        path: '/uc/card/used',
+        name: 'UC_USED', // 已使用卡券包
+        component: function (resolve) {
+          require(['@/components/uc/card/used'], resolve)
+        },
+        meta: {requireAuth: true}
+      },
+      {
+        path: '/uc/card/unused',
+        name: 'UC_UNUSED', // 未使用卡券包
+        component: function (resolve) {
+          require(['@/components/uc/card/unused'], resolve)
+        },
+        meta: {requireAuth: true}
+      },
+      {
+        path: '/uc/card/expired',
+        name: 'UC_EXPIRED', // 已过期卡券包
+        component: function (resolve) {
+          require(['@/components/uc/card/expired'], resolve)
+        },
+        meta: {requireAuth: true}
+      }
+    ]
+  },
+  {
     path: '*', redirect: (to) => {
 // 动态设置重定向的目标
 // 目标路由对象，就是访问的路径的路由信息

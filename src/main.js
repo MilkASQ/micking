@@ -12,7 +12,6 @@ import '@/assets/style/main.css';
 
 import store from '@/store/store'
 import axios from '@/common/axios'
-
 Vue.prototype.$http = axios;
 
 // 路由拦截
