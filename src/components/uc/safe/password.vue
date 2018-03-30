@@ -1,6 +1,6 @@
 <template>
   <main>
-    <v-head title="登录密码" :url="{name:'UC_SAFE'}" rightUrl="" status="false" rightTxt=""></v-head>
+    <vhead title="登录密码" :url="{name:'UC_SAFE'}" rightUrl="" status="false" rightTxt=""></vhead>
     <section class="changePhone">
       <div class="public_form">
         <ul>
@@ -26,8 +26,7 @@
 </template>
 
 <script>
-  import head from "@/components/head.vue"
-  import nav from "@/components/nav.vue"
+  import heads from "@/components/heads"
   import * as types from '@/store/type'
   import * as unit from "@/assets/js/unit"
   import {Toast} from 'mint-ui';
@@ -37,8 +36,7 @@
 
   export default {
     components: {
-      "v-head": head,
-      "v-nav": nav
+      "vhead": heads,
     },
     data() {
       return {

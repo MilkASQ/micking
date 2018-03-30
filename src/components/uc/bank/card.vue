@@ -1,6 +1,6 @@
 <template>
   <main>
-    <v-head title="银行卡信息" :url="{name:'UC_SAFE'}" rightUrl="" status="false" rightTxt=""></v-head>
+    <vhead title="银行卡信息" :url="{name:'UC_SAFE'}" rightUrl="" status="false" rightTxt=""></vhead>
     <section class="bank" v-if="status">
       <div class="bankcard">
         <div class="bankcard_logo">
@@ -22,8 +22,7 @@
 </template>
 
 <script>
-  import head from "@/components/head.vue"
-  import nav from "@/components/nav.vue"
+  import heads from "@/components/heads"
   import * as types from '@/store/type'
   import * as unit from "@/assets/js/unit"
   import {Toast} from 'mint-ui';
@@ -31,8 +30,7 @@
 
   export default {
     components: {
-      "v-head": head,
-      "v-nav": nav
+      "vhead": heads,
     },
     data() {
       return {

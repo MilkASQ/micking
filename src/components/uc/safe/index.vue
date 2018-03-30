@@ -1,6 +1,6 @@
 <template>
   <main>
-    <v-head title="安全中心" :url="{name:'UC'}" rightUrl="" status="false" rightTxt=""></v-head>
+    <vhead title="安全中心" :url="{name:'UC'}" rightUrl="" status="false" rightTxt=""></vhead>
     <section class="menuList">
       <router-link :to="{name:'CHANGE_YES_PHONE'}">
         <span>手机号</span>
@@ -47,15 +47,13 @@
 </template>
 
 <script>
-  import head from "../../head.vue"
-  import nav from "../../nav.vue"
+  import heads from "../../heads"
   import * as types from '../../../store/type'
   import * as unit from "@/assets/js/unit"
 
   export default {
     components: {
-      "v-head": head,
-      "v-nav": nav
+      "vhead": heads,
     },
     data() {
       return {

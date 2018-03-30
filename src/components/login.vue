@@ -1,6 +1,6 @@
 <template>
   <main>
-    <v-head title="登录" url="/index" rightUrl="/register" status="true" rightTxt="立即注册"></v-head>
+    <vhead title="登录" url="/index" rightUrl="/register" status="true" rightTxt="立即注册"></vhead>
     <section class="login">
       <ul>
         <li>
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-  import head from "./head.vue"
+  import heads from "./heads"
   import * as types from '../store/type'
 
   import {Toast} from 'mint-ui';
@@ -48,7 +48,7 @@
 
   export default {
     components: {
-      "v-head": head
+      "vhead": heads
     },
     data() {
       return {

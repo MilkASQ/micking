@@ -5,12 +5,12 @@
 </template>
 
 <script>
-  import head from "../../head.vue"
+  import heads from "../../heads"
   import * as types from '../../../store/type'
 
   export default {
     components: {
-      "v-head": head,
+      "vhead": heads,
     },
     data() {
       return {}

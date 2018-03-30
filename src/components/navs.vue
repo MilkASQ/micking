@@ -27,7 +27,7 @@
 
 <script>
   export default {
-    name: 'nav',
+    name: 'navs',
     data() {
       return {}
     }

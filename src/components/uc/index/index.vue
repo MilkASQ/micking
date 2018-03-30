@@ -5,7 +5,8 @@
         <span class="fl">当前登录账号：MilkA</span>
         <router-link to="/" class="msg fr"><i class="iconFont">&#xe6c9;</i><strong>2</strong></router-link>
       </div>
-      <div class="money"><b>335,272.58</b><p>账户总资产(元)</p></div>
+      <div class="money"><b>335,272.58</b>
+        <p>账户总资产(元)</p></div>
       <ul class="balance">
         <li>可用余额(元)<b>345391.98</b></li>
         <li>冻结金额(元)<b>391.98</b></li>
@@ -95,19 +96,19 @@
       </ul>
       <span @click="logout" class="logout">退出登录</span>
     </section>
-    <v-nav></v-nav>
+    <vnav></vnav>
   </main>
 </template>
 
 <script>
-  import head from "../../head.vue"
-  import nav from "../../nav.vue"
+  import heads from "../../heads"
+  import navs from "../../navs"
   import * as types from '../../../store/type'
 
   export default {
     components: {
-      "v-head": head,
-      "v-nav": nav
+      "vhead": heads,
+      'vnav': navs
     },
     data() {
       return {
@@ -119,13 +120,13 @@
       this.closeLoad();
     },
     methods: {
-      closeLoad (){
+      closeLoad() {
         // 关闭loading
         setTimeout(() => {
           this.loading = false;
         }, 2000);
       },
-      logout (){
+      logout() {
         // 退出
         this.$store.commit(types.LOGOUT);
         this.$store.commit(types.USERINFOCLEAR);
@@ -189,7 +190,7 @@
       line-height: 2.4rem;
       text-align: center;
       font-size: 0.75rem;
-      li{
+      li {
         float: left;
         width: 10rem;
         overflow: hidden;
@@ -202,7 +203,7 @@
           font-weight: normal;
           vertical-align: middle;
         }
-        &:first-child:after{
+        &:first-child:after {
           content: '';
           height: 1rem;
           width: 0.0625rem;
@@ -215,13 +216,13 @@
         }
       }
     }
-    .bottom{
+    .bottom {
       width: 20rem;
       background: #fff;
       color: #666;
       padding: 0.6rem;
       overflow: hidden;
-      dl{
+      dl {
         width: 9.4rem;
         float: left;
         height: 3rem;
@@ -229,20 +230,20 @@
         line-height: 1rem;
         font-size: 0.7rem;
         position: relative;
-        &:first-child:after{
+        &:first-child:after {
           content: '';
           width: 0.0625rem;
           height: 2.4rem;
           background: #eee;
           position: absolute;
-          right:0;
+          right: 0;
           top: 0.3rem;
         }
-        dt{
+        dt {
           line-height: 1rem;
           margin-top: 0.3rem;
         }
-        dd{
+        dd {
           height: 1.7rem;
           line-height: 1.7rem;
           font-size: 1rem;
@@ -254,55 +255,61 @@
       }
     }
   }
-  .ucBtns{
+
+  .ucBtns {
     width: 20rem;
     background: #fff;
     overflow: hidden;
     text-align: center;
     padding: 0 0.5rem 0.8rem 0.5rem;
-    a{
+    a {
       width: 8.5rem;
       height: 2.4rem;
-      background: -webkit-linear-gradient(left bottom, #f90 , #f60);
+      background: -webkit-linear-gradient(left bottom, #f90, #f60);
       display: block;
       border-radius: 1.2rem;
       margin: 0 0.5rem;
       float: left;
       color: #fff;
       line-height: 2.4rem;
-      &:nth-child(2){
+      &:nth-child(2) {
         color: #333;
-        border:0.0625rem solid #ddd;
+        border: 0.0625rem solid #ddd;
         background: none;
       }
     }
   }
-  .ucMenuList{
+
+  .ucMenuList {
     width: 20rem;
-    ul{
+    ul {
       margin-top: 0.6rem;
       background: #fff;
-      li{
+      li {
         height: 2.4rem;
         line-height: 2.4rem;
         overflow: hidden;
         color: #666;
         padding: 0 0.6rem;
         border-bottom: 0.0625rem solid #eee;
-        &:last-child{border-bottom: 0;}
-        a{
+        &:last-child {
+          border-bottom: 0;
+        }
+        a {
           display: block;
           overflow: hidden;
           font-size: 0.875rem;
-          span{float: left;}
-          .iconFont{
+          span {
+            float: left;
+          }
+          .iconFont {
             float: left;
             width: 1.8rem;
             height: 2.4rem;
             text-align: center;
             color: #f60;
             font-size: 1.125rem;
-            &:last-child{
+            &:last-child {
               float: right;
               text-align: right;
               color: #ccc;
@@ -312,11 +319,11 @@
         }
       }
     }
-    .logout{
+    .logout {
       display: block;
       width: 20rem;
       height: 2.4rem;
-      margin-top: 0.6rem;
+      margin: 0.6rem 0;
       background: #fff;
       color: #f60;
       text-align: center;

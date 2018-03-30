@@ -32,12 +32,12 @@
         </router-link>
       </div>
     </section>
-    <v-nav></v-nav>
+    <vnav></vnav>
   </main>
 </template>
 
 <script>
-  import nav from "./nav";
+  import navs from "./navs";
 
   export default {
     name: '',
@@ -73,7 +73,7 @@
       }
     },
     components: {
-      'v-nav': nav
+      'vnav': navs
     }
   }
 </script>

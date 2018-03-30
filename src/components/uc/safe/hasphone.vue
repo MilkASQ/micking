@@ -1,6 +1,6 @@
 <template>
   <main>
-    <!--<v-head title="验证信息" :url="{name:'CHANGE_PHONE'}" rightUrl="" status="false" rightTxt=""></v-head>-->
+    <!--<vhead title="验证信息" :url="{name:'CHANGE_PHONE'}" rightUrl="" status="false" rightTxt=""></vhead>-->
     <section class="changePhone">
       <div class="top_tips">
         <span class="a666">点击“获取验证码”，将发送短信验证码到您的手机</span>
@@ -24,8 +24,7 @@
 </template>
 
 <script>
-  import head from "@/components/head.vue"
-  import nav from "@/components/nav.vue"
+  import heads from "@/components/heads"
   import * as unit from "@/assets/js/unit"
   import {Toast} from 'mint-ui';
   import * as types from '@/store/type'
@@ -33,8 +32,7 @@
 
   export default {
     components: {
-      "v-head": head,
-      "v-nav": nav
+      "vhead": heads,
     },
     data() {
       return {

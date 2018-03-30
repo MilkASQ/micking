@@ -1,6 +1,6 @@
 <template>
   <main>
-    <!--<v-head title="验证信息" :url="{name:'CHANGE_PHONE'}" rightUrl="" status="false" rightTxt=""></v-head>-->
+    <!--<vhead title="验证信息" :url="{name:'CHANGE_PHONE'}" rightUrl="" status="false" rightTxt=""></vhead>-->
     <section class="changePhone">
       <div class="public_form">
         <ul>
@@ -22,8 +22,7 @@
 </template>
 
 <script>
-  import head from "@/components/head.vue"
-  import nav from "@/components/nav.vue"
+  import heads from "@/components/heads"
   import * as unit from "@/assets/js/unit"
   import {Toast} from 'mint-ui';
   import * as types from '@/store/type'
@@ -31,8 +30,7 @@
 
   export default {
     components: {
-      "v-head": head,
-      "v-nav": nav
+      "vhead": heads,
     },
     data() {
       return {

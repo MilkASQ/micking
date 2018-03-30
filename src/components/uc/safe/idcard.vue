@@ -1,6 +1,6 @@
 <template>
   <main>
-    <v-head title="实名认证" :url="{name:'UC_SAFE'}" rightUrl="" status="false" rightTxt=""></v-head>
+    <vhead title="实名认证" :url="{name:'UC_SAFE'}" rightUrl="" status="false" rightTxt=""></vhead>
     <section class="showsList" v-if="status">
       <div class="topTips"><i class="iconFont agreen">&#xe618;</i>您已通过实名认证，如需帮助请联系客服</div>
       <ul class="listing">
@@ -50,8 +50,7 @@
 </template>
 
 <script>
-  import head from "@/components/head.vue"
-  import nav from "@/components/nav.vue"
+  import heads from "@/components/heads"
   import * as unit from "@/assets/js/unit"
   import {Toast} from 'mint-ui';
   import * as types from '@/store/type'
@@ -59,8 +58,7 @@
 
   export default {
     components: {
-      "v-head": head,
-      "v-nav": nav
+      "vhead": heads,
     },
     data() {
       return {

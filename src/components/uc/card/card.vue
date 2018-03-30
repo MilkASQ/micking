@@ -1,6 +1,6 @@
 <template>
   <main>
-    <v-head title="卡券包" :url="{name:'UC'}" rightUrl="" status="false" rightTxt=""></v-head>
+    <vhead title="卡券包" :url="{name:'UC'}" rightUrl="" status="false" rightTxt=""></vhead>
     <section class="menuTab">
       <router-link :to="{name:'UC_UNUSED'}">未使用</router-link>
       <router-link :to="{name:'UC_USED'}">已使用</router-link>
@@ -11,12 +11,12 @@
 </template>
 
 <script>
-  import head from "../../head.vue"
+  import heads from "../../heads"
   import * as types from '../../../store/type'
 
   export default {
     components: {
-      "v-head": head
+      "vhead": heads
     },
     data() {
       return {}

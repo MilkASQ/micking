@@ -118,7 +118,7 @@ let routes = [
   },
   {
     path: '/uc/invest/total',
-    name: 'INVEST', // 投资记录
+    name: 'UC_INVEST', // 投资记录
     component: function (resolve) {
       require(['@/components/uc/invest/index'], resolve)
     },

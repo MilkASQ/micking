@@ -31,14 +31,12 @@
 </template>
 
 <script>
-  import head from "../../head.vue"
-  import nav from "../../nav.vue"
+  import head from "../../heads"
   import * as types from '../../../store/type'
 
   export default {
     components: {
-      "v-head": head,
-      "v-nav": nav
+      "vhead": heads,
     },
     data() {
       return {

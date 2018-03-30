@@ -1,6 +1,6 @@
 <template>
   <main>
-    <v-head title="更改手机号码" :url="{name:'UC_SAFE'}" rightUrl="" status="false" rightTxt=""></v-head>
+    <vhead title="更改手机号码" :url="{name:'UC_SAFE'}" rightUrl="" status="false" rightTxt=""></vhead>
     <section class="menuTab">
       <router-link :to="{name:'CHANGE_YES_PHONE'}">原手机在用</router-link>
       <router-link :to="{name:'CHANGE_NOT_PHONE'}">原手机不在用</router-link>
@@ -10,14 +10,12 @@
 </template>
 
 <script>
-  import head from "../../head.vue"
-  import nav from "../../nav.vue"
+  import heads from "../../heads"
   import * as types from '../../../store/type'
 
   export default {
     components: {
-      "v-head": head,
-      "v-nav": nav
+      "vhead": heads,
     },
     data() {
       return {}

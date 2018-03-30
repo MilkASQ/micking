@@ -3,7 +3,6 @@
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
-    <loading v-model="isLoading"></loading>
   </div>
 </template>
 
