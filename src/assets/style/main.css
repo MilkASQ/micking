@@ -1,6 +1,7 @@
 @import 'base.css';
 
-
+/*渐变背景*/
+.linearBackground{background: -webkit-linear-gradient(left bottom, #f90, #f60);}
 
 .banner{ height: 10.9375rem; overflow: hidden;}
 .banner a{ width: 20rem; height: 10.9375rem; display: block;}
@@ -100,3 +101,22 @@
   -moz-border-radius: 0.7rem;
   border-radius: 0.7rem;}
 .investedList li .bottom a.btn.over{ border: 1px solid #999; color: #999;}
+
+/*卡券包*/
+.new_bonusList{ width: 20rem; height: auto; padding: 0.6rem 0.6rem 0 0.6rem;}
+.new_bonusList li{ position: relative; height: auto; margin-bottom: 0.6rem; padding: 0.4rem; background: #fff url(../images/card_left.jpg) repeat-y; background-size: 0.4rem; border-radius: 0.25rem; overflow: hidden;}
+.new_bonusList li .top{ width: auto; padding: 0 0 0.5rem 0.4rem; overflow: hidden;}
+.new_bonusList li .top .topLeft{ width: 9rem; float: left;}
+.new_bonusList li .top .name{ height: 1.6rem; line-height: 1.6rem; color: #f60;}
+.new_bonusList li .top .time{ height: 1rem; line-height: 1rem; font-size: 0.75rem; color: #999;}
+.new_bonusList li .money{  width: 4rem; float: left; height: 2.6rem; line-height: 2.6rem; font-size: 0.75rem; color: #f60;}
+.new_bonusList li .money em{font-size: 1.25rem;}
+.new_bonusList li .bottom{width: auto; border-top: 0.0625rem dashed #ddd; line-height: 1rem; padding: 0.5rem 0.4rem 0 0.4rem; font-size: 0.75rem; color: #666;}
+.new_bonusList li .bottom span{display: inline-block; margin-right:0.4rem;}
+.new_bonusList li .btn{ width: 4.5rem; height: 1.6rem; line-height: 1.6rem; border-radius: 0.8rem; position: absolute; right: 0.6rem; top: 0.8rem; border:0.0625rem solid #f60; color: #f60; font-size: 0.75rem; text-align: center;}
+.new_bonusList li.over{background: #fff url(../images/card_left_o.jpg) repeat-y; background-size: 0.4rem;}
+.new_bonusList li.over .top .name,.new_bonusList li.over .btn{border-color: #ddd;}
+.new_bonusList li.over .bottom,.new_bonusList li.over .btn,.new_bonusList li.over .money,.new_bonusList li.over .top .name{ color: #999;}
+
+/*列表提示*/
+.listTips{ width: 20rem; height: 2rem; line-height: 2rem; background: #f6f6f6; text-align: center; font-size: 0.75rem; color: #999;}

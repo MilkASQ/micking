@@ -57,7 +57,7 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/">
+          <router-link :to="{name:'UC_SCORES'}">
             <!--<i class="iconFont">&#xe608;</i>-->
             <span>积分商城</span>
             <i class="iconFont">&#xe611;</i>

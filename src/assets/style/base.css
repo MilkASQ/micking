@@ -113,3 +113,9 @@ header { width: 20rem; height: 2.5rem;}
 .header .center { font-size: 0.875rem; color: #333; text-align: center; line-height: 2.5rem; }
 .header .right_btn { width: auto; height: 2.5rem; padding: 0 0.5rem; font-size: 0.75rem; color: #666; text-align: center; line-height: 2.5rem; position: absolute; top: 0; right: 0; }
 
+/*暂无记录*/
+.empty{ width: 20rem; height: 6.38rem; line-height: 1.5rem; font-size: 0.75rem; text-align: center; margin-top: 5rem; padding-top: 4.88rem; background: url(../images/empty_icon.png) no-repeat center top; background-size: 4.88rem;}
+.empty.card{background-image: url(../images/empty_icon_card.png)}
+.toScoresBtn{ width: 10rem; height: 2rem; border:1px solid #f60; color: #f60; text-align: center; line-height: 1.9rem; display: block; border-radius: 1.1rem; margin: 1.5rem auto 0;}
+
+

@@ -193,6 +193,22 @@ let routes = [
     ]
   },
   {
+    path: '/uc/scores/index',
+    name: 'UC_SCORES', // 积分商城
+    component: function (resolve) {
+      require(['@/components/uc/scores/index'], resolve)
+    },
+    meta: {requireAuth: true},
+  },
+  {
+    path: '/uc/scores/log',
+    name: 'UC_SCORES_LOG', // 积分明细
+    component: function (resolve) {
+      require(['@/components/uc/scores/log'], resolve)
+    },
+    meta: {requireAuth: true},
+  },
+  {
     path: '*', redirect: (to) => {
 // 动态设置重定向的目标
 // 目标路由对象，就是访问的路径的路由信息
