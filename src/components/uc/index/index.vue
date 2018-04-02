@@ -101,7 +101,7 @@
 </template>
 
 <script>
-  import heads from "../../heads"
+  import heads from "../../vtops"
   import navs from "../../navs"
   import * as types from '../../../store/type'
 

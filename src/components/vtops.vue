@@ -11,7 +11,7 @@
 <script>
   export default {
     props: ['title', 'url', 'rightUrl', 'status', "rightTxt"],
-    name: 'head',
+    name: 'vtops',
     data() {
       return {}
     }

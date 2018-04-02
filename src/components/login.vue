@@ -35,7 +35,7 @@
 </template>
 
 <script>
-  import heads from "./heads"
+  import heads from "./vtops"
   import * as types from '../store/type'
 
   import {Toast} from 'mint-ui';

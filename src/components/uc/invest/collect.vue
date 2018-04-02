@@ -31,7 +31,7 @@
 </template>
 
 <script>
-  import head from "../../heads"
+  import head from "../../vtops"
   import * as types from '../../../store/type'
 
   export default {

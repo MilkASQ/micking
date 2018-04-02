@@ -29,7 +29,7 @@
 </template>
 
 <script>
-  import heads from "@/components/heads"
+  import heads from "@/components/vtops"
   import * as unit from "@/assets/js/unit"
   import {Toast} from 'mint-ui';
   import * as types from '@/store/type'
