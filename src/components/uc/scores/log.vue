@@ -19,7 +19,6 @@
 
 <script>
   import Vue from 'vue'
-
   import heads from "../../vtops"
   import { Loadmore } from 'mint-ui';
 
@@ -152,6 +151,7 @@
             type: 2
           });
           this.allLoaded = false;// 若数据已全部获取完毕
+          _this.tipsStatus = true;
         },1000);
 
       }

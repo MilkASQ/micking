@@ -23,14 +23,42 @@ let routes = [
     },
     meta: {requireAuth: false}
   },
+
   {
-    path: '/invest/:id',
+    path: '/invest/index',
     name: 'INVEST', // 理财中心
     component: function (resolve) {
-      require(['@/components/index/invest'], resolve)
+      require(['@/components/index/invest/index'], resolve)
     },
-    meta: {requireAuth: false}
+    meta: {requireAuth: false},
+    children: [
+      {
+        path: '/invest/wealth',
+        name: 'INVEST_WEALTH', // 微财富
+        component: function (resolve) {
+          require(['@/components/index/invest/wealth'], resolve)
+        },
+        meta: {requireAuth: false}
+      },
+      {
+        path: '/invest/student',
+        name: 'INVEST_STUDENT', // 惠学贷
+        component: function (resolve) {
+          require(['@/components/index/invest/student'], resolve)
+        },
+        meta: {requireAuth: false}
+      },
+      {
+        path: '/invest/debt',
+        name: 'INVEST_DEBT', // 债权转让
+        component: function (resolve) {
+          require(['@/components/index/invest/debt'], resolve)
+        },
+        meta: {requireAuth: false}
+      }
+    ]
   },
+
   {
     path: '/uc',
     name: 'UC', // 会员中心
@@ -210,12 +238,12 @@ let routes = [
   },
   {
     path: '*', redirect: (to) => {
-// 动态设置重定向的目标
-// 目标路由对象，就是访问的路径的路由信息
+    // 动态设置重定向的目标
+    // 目标路由对象，就是访问的路径的路由信息
     if (to.path === '/invest') {
-      return '/invest/1'
+      return '/invest/wealth';
     }
-    return '/index'
+    return '/index';
   }
   }
 ];
