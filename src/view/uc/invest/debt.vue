@@ -5,7 +5,7 @@
         <li v-for="todo in data">
           <div class="top">
             <div class="name">{{todo.name}}</div>
-            <div class="time">{{todo.numbers}}</div>
+            <div class="time">{{todo.time}}</div>
           </div>
           <div class="center">
             <dl>
@@ -17,12 +17,9 @@
               <dd>{{todo.profit}} </dd>
             </dl>
             <dl>
-              <dt>加息奖励(元)</dt>
-              <dd>{{todo.increase}}</dd>
+              <dt>状态</dt>
+              <dd><span>{{todo.status}}</span></dd>
             </dl>
-          </div>
-          <div class="bottom">
-            <router-link to="" tag="span" class="fl a666">{{todo.time}}</router-link>
           </div>
         </li>
       </ul>
@@ -31,8 +28,8 @@
 </template>
 
 <script>
-  import head from "../../vtops"
-  import * as types from '../../../store/type'
+  import heads from "@/components/vtops"
+  import * as types from '@/store/type'
 
   export default {
     components: {
@@ -43,39 +40,35 @@
         data: [
           {
             id: 200,
-            name: '新手标 NO.3000',
+            name: '新手标 NO.3000[转]',
             time: '2018-02-07 15:50:18',
-            principal: 6000,
+            principal: 16000,
             profit: 256.60,
-            increase: 6.60,
-            numbers: '第一期',
+            status: '购买成功'
           },
           {
             id: 201,
-            name: '新手标 NO.3001',
+            name: '新手标 NO.3001[转]',
             time: '2018-02-07 15:59:18',
             principal: 15000,
             profit: 2006.60,
-            increase: 166.60,
-            numbers: '第一期'
+            status: '购买成功'
           },
           {
             id: 200,
-            name: '新手标 NO.3000',
+            name: '新手标 NO.3000[转]',
             time: '2018-02-07 15:50:18',
             principal: 6000,
             profit: 256.60,
-            increase: 16.60,
-            numbers: '第二期',
+            status: '购买成功'
           },
           {
             id: 201,
-            name: '新手标 NO.3001',
+            name: '新手标 NO.3001[转]',
             time: '2018-02-07 15:59:18',
             principal: 15000,
             profit: 2006.60,
-            increase: 166.60,
-            numbers: '第三期'
+            status: '购买成功'
           },
         ]
       }

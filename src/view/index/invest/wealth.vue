@@ -27,7 +27,7 @@
 
 <script>
   import Vue from 'vue'
-  import heads from "../../vtops"
+  import heads from "@/components/vtops"
   import {Loadmore} from 'mint-ui';
   import {InfiniteScroll} from 'mint-ui';
 

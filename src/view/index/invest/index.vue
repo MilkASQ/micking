@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import navs from "../../navs"
+  import navs from "@/components/navs"
 
   export default {
     data() {

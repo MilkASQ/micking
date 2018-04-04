@@ -19,7 +19,7 @@
 
 <script>
   import Vue from 'vue'
-  import heads from "../../vtops"
+  import heads from "@/components/vtops"
   import { Loadmore } from 'mint-ui';
 
   Vue.component(Loadmore.name, Loadmore);

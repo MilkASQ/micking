@@ -47,8 +47,8 @@
 </template>
 
 <script>
-  import heads from "../../vtops"
-  import * as types from '../../../store/type'
+  import heads from "@/components/vtops"
+  import * as types from '@/store/type'
   import * as unit from "@/assets/js/unit"
 
   export default {

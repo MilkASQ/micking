@@ -5,7 +5,7 @@
         <li v-for="todo in data">
           <div class="top">
             <div class="name">{{todo.name}}</div>
-            <div class="time">{{todo.time}}</div>
+            <div class="time">{{todo.numbers}}</div>
           </div>
           <div class="center">
             <dl>
@@ -17,9 +17,12 @@
               <dd>{{todo.profit}} </dd>
             </dl>
             <dl>
-              <dt>状态</dt>
-              <dd><span>{{todo.status}}</span></dd>
+              <dt>加息奖励(元)</dt>
+              <dd>{{todo.increase}}</dd>
             </dl>
+          </div>
+          <div class="bottom">
+            <router-link to="" tag="span" class="fl a666">{{todo.time}}</router-link>
           </div>
         </li>
       </ul>
@@ -28,8 +31,8 @@
 </template>
 
 <script>
-  import heads from "../../vtops"
-  import * as types from '../../../store/type'
+  import head from "@/components/vtops"
+  import * as types from '@/store/type'
 
   export default {
     components: {
@@ -40,35 +43,39 @@
         data: [
           {
             id: 200,
-            name: '新手标 NO.3000[转]',
-            time: '2018-02-07 15:50:18',
-            principal: 16000,
-            profit: 256.60,
-            status: '购买成功'
-          },
-          {
-            id: 201,
-            name: '新手标 NO.3001[转]',
-            time: '2018-02-07 15:59:18',
-            principal: 15000,
-            profit: 2006.60,
-            status: '购买成功'
-          },
-          {
-            id: 200,
-            name: '新手标 NO.3000[转]',
+            name: '新手标 NO.3000',
             time: '2018-02-07 15:50:18',
             principal: 6000,
             profit: 256.60,
-            status: '购买成功'
+            increase: 6.60,
+            numbers: '第一期',
           },
           {
             id: 201,
-            name: '新手标 NO.3001[转]',
+            name: '新手标 NO.3001',
             time: '2018-02-07 15:59:18',
             principal: 15000,
             profit: 2006.60,
-            status: '购买成功'
+            increase: 166.60,
+            numbers: '第一期'
+          },
+          {
+            id: 200,
+            name: '新手标 NO.3000',
+            time: '2018-02-07 15:50:18',
+            principal: 6000,
+            profit: 256.60,
+            increase: 16.60,
+            numbers: '第二期',
+          },
+          {
+            id: 201,
+            name: '新手标 NO.3001',
+            time: '2018-02-07 15:59:18',
+            principal: 15000,
+            profit: 2006.60,
+            increase: 166.60,
+            numbers: '第三期'
           },
         ]
       }

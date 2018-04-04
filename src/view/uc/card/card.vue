@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import heads from "../../vtops"
+  import heads from "@/components/vtops"
   import * as types from '../../../store/type'
 
   export default {

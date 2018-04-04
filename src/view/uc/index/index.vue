@@ -101,8 +101,8 @@
 </template>
 
 <script>
-  import heads from "../../vtops"
-  import navs from "../../navs"
+  import heads from "@/components/vtops"
+  import navs from "@/components/navs"
   import * as types from '../../../store/type'
 
   export default {

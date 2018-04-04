@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import heads from "../../vtops"
+  import heads from "@/components/vtops"
 
   export default {
     components: {
