@@ -8,7 +8,7 @@
 .banner img{ width: 20rem; height: 10.9375rem; display: block;}
 
 /*标的列表*/
-.invest_list{padding-bottom: 0.5rem;}
+.invest_list{overflow: hidden; margin-top: 2.8rem;}
 .invest_item { width: 20rem; height: auto; background: #fff; margin: 0.5rem 0 0 0; overflow: hidden; }
 .invest_item a { display: block; overflow: hidden; padding: 0.5rem; }
 .invest_item a .name { height: 1.6rem; line-height: 1.6rem; }
@@ -17,11 +17,10 @@
 .invest_item a .number span { font-size: 0.75rem; }
 .invest_item a .center {width: 9rem;  height: 2.4rem;float: left; padding: 0.3rem 0 0.3rem 0.6rem; }
 .invest_item a .center p ,.invest_item a .center .mt-progress{ width: 80%; height: 0.9rem; line-height: 0.9rem; font-size: 0.75rem; color: #666; }
-/*.invest_item a .center .mt-progress .el-progress__text{font-size: 0.68rem !important; color: #666;}*/
 .invest_item a .right {  width: 4.5rem; float: left;}
 .invest_item a .right .btn { width: auto; height: 1.6rem; line-height: 1.6rem; text-align: center; display: block; font-size: 0.75rem; box-shadow: 0 0.125rem 0.5rem rgba(255,86,0,0.4); background: -webkit-linear-gradient(left bottom, #ff8b00 , #ff5200);  color: #fff; border-radius: 0.8rem; margin-top: 0.4rem; }
 
-.invest_tab{width: 20rem; height: 2.8rem; background: #f60; text-align: center; color: #fff;}
+.invest_tab{width: 20rem; height: 2.8rem; background: #f60; text-align: center; color: #fff; position: fixed; left: 0; top: 0; z-index: 10;}
 .invest_tab a{ line-height: 2.8rem; background: #f60; text-align: center; color: #fff; display: inline-block; padding: 0 0.3rem; font-size: 0.875rem; position: relative;}
 .invest_tab a:after{ content: ''; width: 1.2rem; height: 0.1rem; background: #fff; position: absolute; left: 50%; margin-left: -0.6rem; bottom: 0.2rem; display: none;}
 .invest_tab a.on:after{display: block;}
@@ -119,4 +118,4 @@
 .new_bonusList li.over .bottom,.new_bonusList li.over .btn,.new_bonusList li.over .money,.new_bonusList li.over .top .name{ color: #999;}
 
 /*列表提示*/
-.listTips{ width: 20rem; height: 2rem; line-height: 2rem; background: #f6f6f6; text-align: center; font-size: 0.75rem; color: #999;}
+.listTips{ width: 20rem; height: 2.4rem; line-height: 2.4rem; background: #f6f6f6; text-align: center; font-size: 0.75rem; color: #999;}

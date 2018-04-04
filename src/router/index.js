@@ -4,26 +4,18 @@ import store from '@/store/store'
 import * as types from '@/store/type'
 
 
-Vue.use(Router)
+Vue.use(Router);
 
 let routes = [
-  {
-    path: '/login',
-    name: 'LOGIN', // 登录
-    component: function (resolve) {
-      require(['@/view/uc/sign/login'], resolve)
-    },
-    meta: {requireAuth: false}
-  },
+  // index
   {
     path: '/index',
     name: 'INDEX', // 首页
     component: function (resolve) {
-      require(['@/view/home'], resolve)
+      require(['@/view/index'], resolve)
     },
     meta: {requireAuth: false}
   },
-
   {
     path: '/invest/index',
     name: 'INVEST', // 理财中心
@@ -58,7 +50,17 @@ let routes = [
       }
     ]
   },
+  {
+    path: '/rules/:type',
+    name: 'RULES', // 规则页面
+    component: function (resolve) {
+      require(['@/view/index/rules/index'], resolve)
+    },
+    meta: {requireAuth: false}
+  },
 
+
+  // uc
   {
     path: '/uc',
     name: 'UC', // 会员中心
@@ -66,6 +68,14 @@ let routes = [
       require(['@/view/uc/index'], resolve)
     },
     meta: {requireAuth: true}
+  },
+  {
+    path: '/login',
+    name: 'LOGIN', // 登录
+    component: function (resolve) {
+      require(['@/view/uc/sign/login'], resolve)
+    },
+    meta: {requireAuth: false}
   },
   {
     path: '/uc/safe',
@@ -154,7 +164,7 @@ let routes = [
     children: [
       {
         path: '/uc/invest/index',
-        name: 'INVEST_INDEX', // 投资记录 全部
+        name: 'UC_INVEST_INDEX', // 投资记录 全部
         component: function (resolve) {
           require(['@/view/uc/invest/total'], resolve)
         },
@@ -162,7 +172,7 @@ let routes = [
       },
       {
         path: '/uc/invest/collect',
-        name: 'INVEST_COLLECT', // 投资记录 待收
+        name: 'UC_INVEST_COLLECT', // 投资记录 待收
         component: function (resolve) {
           require(['@/view/uc/invest/collect'], resolve)
         },
@@ -170,7 +180,7 @@ let routes = [
       },
       {
         path: '/uc/invest/completed',
-        name: 'INVEST_COMPLETED', // 投资记录 已结清
+        name: 'UC_INVEST_COMPLETED', // 投资记录 已结清
         component: function (resolve) {
           require(['@/view/uc/invest/completed'], resolve)
         },
@@ -178,7 +188,7 @@ let routes = [
       },
       {
         path: '/uc/invest/debt',
-        name: 'INVEST_DEBT', // 投资记录 已买入债权
+        name: 'UC_INVEST_DEBT', // 投资记录 已买入债权
         component: function (resolve) {
           require(['@/view/uc/invest/debt'], resolve)
         },
@@ -237,6 +247,22 @@ let routes = [
     meta: {requireAuth: true},
   },
   {
+    path: '/uc/scores/detail/:id',
+    name: 'UC_SCORES_DETAIL', // 积分明细
+    component: function (resolve) {
+      require(['@/view/uc/scores/detail'], resolve)
+    },
+    meta: {requireAuth: true},
+  },
+  {
+    path: '/uc/money/index',
+    name: 'UC_MONEY', // 资金记录
+    component: function (resolve) {
+      require(['@/view/uc/money/index'], resolve)
+    },
+    meta: {requireAuth: true},
+  },
+  {
     path: '*', redirect: (to) => {
     // 动态设置重定向的目标
     // 目标路由对象，就是访问的路径的路由信息
@@ -249,7 +275,6 @@ let routes = [
 ];
 
 // 页面刷新时，重新赋值token 和userInfo 和权限
-
 if (window.localStorage.getItem('token')) {
   store.commit(types.LOGIN, window.localStorage.getItem('token'));
 }

@@ -18,7 +18,7 @@
             </div>
           </router-link>
         </div>
-        <div class="listTips" v-show="tipsStatus">加载中...</div>
+        <div class="listTips" v-show="tipsStatus"><div class="loader_wrap"><span class="loader"></span></div>数据加载中...</div>
       </section>
       <div class="empty" v-else>暂无标的记录</div>
     </mt-loadmore>

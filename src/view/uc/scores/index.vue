@@ -10,11 +10,13 @@
         <div class="title">可兑换商品</div>
         <ul>
           <li v-for="item in list">
-            <div class="image" :class="{ type1: item.type === 1 , type2 : item.type === 2}">
-              <em>{{item.money}}</em>{{ item.type === 1 ? '元' : '%' }}
-            </div>
-            <div class="name">{{item.name}}</div>
-            <div class="need">{{item.need}}</div>
+            <router-link :to="{name:'UC_SCORES_DETAIL',params: { id: item.id }}">
+              <div class="image" :class="{ type1: item.type === 1 , type2 : item.type === 2}">
+                <em>{{item.money}}</em>{{ item.type === 1 ? '元' : '%' }}
+              </div>
+              <div class="name">{{item.name}}</div>
+              <div class="need">{{item.need}}</div>
+            </router-link>
           </li>
         </ul>
       </div>
@@ -69,7 +71,7 @@
             need: '1,000积分',
           },
           {
-            id: 4,
+            id: 6,
             type: 2,
             money: 100,
             name: '2%加息券',

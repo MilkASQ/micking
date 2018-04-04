@@ -36,7 +36,7 @@
           </router-link>
         </li>
         <li>
-          <router-link :to="{name:'INVEST_INDEX'}">
+          <router-link :to="{name:'UC_INVEST_INDEX'}">
             <!--<i class="iconFont">&#xe608;</i>-->
             <span>投资记录</span>
             <i class="iconFont">&#xe611;</i>
@@ -66,7 +66,7 @@
       </ul>
       <ul>
         <li>
-          <router-link to="/">
+          <router-link :to="{name:'UC_MONEY'}">
             <!--<i class="iconFont">&#xe608;</i>-->
             <span>资金记录</span>
             <i class="iconFont">&#xe611;</i>

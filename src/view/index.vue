@@ -14,7 +14,7 @@
         </p>
       </section>
     </section>
-    <section class="invest_list">
+    <section class="invest_list indexHtml">
       <div class="invest_item" v-for="item in invest">
         <router-link :to="item.url">
           <div class="name">
@@ -86,7 +86,9 @@
       display: block;
     }
   }
-
+  .invest_list.indexHtml{
+    margin-top: 0;
+  }
   .notice {
     height: 2.2rem;
     line-height: 2.2rem;
