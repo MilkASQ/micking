@@ -23,7 +23,7 @@
       </div>
     </section>
     <section class="ucBtns">
-      <router-link to="/">充值</router-link>
+      <router-link :to="{name:'UC_RECHARGE'}">充值</router-link>
       <router-link to="/">提现</router-link>
     </section>
     <section class="ucMenuList">
@@ -73,7 +73,7 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/">
+          <router-link :to="{name:'UC_RECHARGE'}">
             <!--<i class="iconFont">&#xe608;</i>-->
             <span>自动投标</span>
             <i class="iconFont">&#xe611;</i>

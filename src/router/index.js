@@ -263,6 +263,22 @@ let routes = [
     meta: {requireAuth: true},
   },
   {
+    path: '/uc/recharge/index',
+    name: 'UC_RECHARGE', // 充值
+    component: function (resolve) {
+      require(['@/view/uc/recharge/index'], resolve)
+    },
+    meta: {requireAuth: true},
+  },
+  {
+    path: '/uc/recharge/log',
+    name: 'UC_RECHARGE_LOG', // 充值记录
+    component: function (resolve) {
+      require(['@/view/uc/recharge/index'], resolve)
+    },
+    meta: {requireAuth: true},
+  },
+  {
     path: '*', redirect: (to) => {
     // 动态设置重定向的目标
     // 目标路由对象，就是访问的路径的路由信息
