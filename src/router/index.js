@@ -51,7 +51,8 @@ let routes = [
     ]
   },
   {
-    path: '/rules/:type',
+    // path: '/rules/:type',
+    path: '/rules',
     name: 'RULES', // 规则页面
     component: function (resolve) {
       require(['@/view/index/rules/index'], resolve)
@@ -274,7 +275,47 @@ let routes = [
     path: '/uc/recharge/log',
     name: 'UC_RECHARGE_LOG', // 充值记录
     component: function (resolve) {
-      require(['@/view/uc/recharge/index'], resolve)
+      require(['@/view/uc/recharge/log'], resolve)
+    },
+    meta: {requireAuth: true},
+  },
+  {
+    path: '/uc/withdraw/index',
+    name: 'UC_WITHDRAW', // 提现
+    component: function (resolve) {
+      require(['@/view/uc/withdraw/index'], resolve)
+    },
+    meta: {requireAuth: true},
+  },
+  {
+    path: '/uc/withdraw/log',
+    name: 'UC_WITHDRAW_LOG', // 提现记录
+    component: function (resolve) {
+      require(['@/view/uc/withdraw/log'], resolve)
+    },
+    meta: {requireAuth: true},
+  },
+  {
+    path: '/uc/autoborrow/index',
+    name: 'UC_AUTOBORROW', // 自动投标
+    component: function (resolve) {
+      require(['@/view/uc/autoborrow/index'], resolve)
+    },
+    meta: {requireAuth: true},
+  },
+  {
+    path: '/uc/autoborrow/add',
+    name: 'UC_AUTOBORROW_ADD', // 自动投标 添加
+    component: function (resolve) {
+      require(['@/view/uc/autoborrow/add'], resolve)
+    },
+    meta: {requireAuth: true},
+  },
+  {
+    path: '/uc/autoborrow/edit',
+    name: 'UC_AUTOBORROW_EDIT', // 自动投标 添加
+    component: function (resolve) {
+      require(['@/view/uc/autoborrow/edit'], resolve)
     },
     meta: {requireAuth: true},
   },

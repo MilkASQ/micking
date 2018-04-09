@@ -137,3 +137,16 @@ header { width: 20rem; height: 2.5rem;}
   100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); box-shadow: -0.11em -0.83em 0 -0.4em #999, -0.11em -0.83em 0 -0.42em #999, -0.11em -0.83em 0 -0.44em #999, -0.11em -0.83em 0 -0.46em #999, -0.11em -0.83em 0 -0.477em #999; }
 }
 
+/*switch*/
+.iSwitch{ position: relative; display: inline-block; width: 3.2rem; height: 1.6rem; border-radius: 1.6rem; background: #dcdcdc; overflow: hidden; vertical-align: middle;}
+.iSwitch input{ visibility: hidden; }
+.iSwitch i{ position: absolute; top: 0; left: 0; display: inline-block; width: 1.6rem; height: 100%; border-radius: 100%; background: #fff; }
+.iSwitch i::before{ content: ""; display: none; width: 3.2rem; height: 1.6rem; border-radius: 25%; background: #78e88b; }
+.iSwitch i::after{content: ""; position: absolute; left: 0; top: 0; z-index: 2; display: inline-block; width: 1.6rem; height: 1.6rem; border-radius: 100%; background: #fff;}
+.iSwitch input:checked + i{ transform:translateX(100%); -webkit-transform:translateX(100%); }
+.iSwitch input:checked + i:before{ display: inline-block; transform:translateX(-50%); -webkit-transform:translateX(-50%); }
+
+/*radio*/
+.radioLabel{width: auto; margin-right: 0.3125rem;}
+.radioLabel input[type=radio]{width: 0.8rem; height: 0.8rem; margin-right: 0.2rem; outline: none; border:0.125rem solid #f60; border-radius: 0.4rem; vertical-align: middle; display: inline-block;}
+.radioLabel input[type=radio]:checked{background: #f60;}

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <vhead title="积分明细" :url="{name:'UC_SCORES'}" :rightUrl="{name:'RULES',params:{type:21}}" status="true" rightTxt="说明"></vhead>
+    <vhead title="积分明细" :url="{name:'UC_SCORES'}" :rightUrl="{name:'RULES',query: {redirect: '/uc/autoborrow/add',type:21}}" status="true" rightTxt="说明"></vhead>
     <mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" ref="loadmore">
       <div class="scoresList" v-if="list.length > 0">
         <ul>

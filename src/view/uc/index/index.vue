@@ -24,7 +24,7 @@
     </section>
     <section class="ucBtns">
       <router-link :to="{name:'UC_RECHARGE'}">充值</router-link>
-      <router-link to="/">提现</router-link>
+      <router-link :to="{name:'UC_WITHDRAW'}">提现</router-link>
     </section>
     <section class="ucMenuList">
       <ul>
@@ -32,14 +32,14 @@
           <router-link :to="{name:'UC_SAFE'}">
             <!--<i class="iconFont">&#xe608;</i>-->
             <span>安全中心</span>
-            <i class="iconFont">&#xe611;</i>
+            <i class="iconFont right">&#xe611;</i>
           </router-link>
         </li>
         <li>
           <router-link :to="{name:'UC_INVEST_INDEX'}">
             <!--<i class="iconFont">&#xe608;</i>-->
             <span>投资记录</span>
-            <i class="iconFont">&#xe611;</i>
+            <i class="iconFont right">&#xe611;</i>
           </router-link>
         </li>
         <!--<li>
@@ -53,14 +53,14 @@
           <router-link :to="{name:'UC_UNUSED'}">
             <!--<i class="iconFont">&#xe608;</i>-->
             <span>卡券包</span>
-            <i class="iconFont">&#xe611;</i>
+            <i class="iconFont right">&#xe611;</i>
           </router-link>
         </li>
         <li>
           <router-link :to="{name:'UC_SCORES'}">
             <!--<i class="iconFont">&#xe608;</i>-->
             <span>积分商城</span>
-            <i class="iconFont">&#xe611;</i>
+            <i class="iconFont right">&#xe611;</i>
           </router-link>
         </li>
       </ul>
@@ -69,28 +69,28 @@
           <router-link :to="{name:'UC_MONEY'}">
             <!--<i class="iconFont">&#xe608;</i>-->
             <span>资金记录</span>
-            <i class="iconFont">&#xe611;</i>
+            <i class="iconFont right">&#xe611;</i>
           </router-link>
         </li>
         <li>
-          <router-link :to="{name:'UC_RECHARGE'}">
+          <router-link :to="{name:'UC_AUTOBORROW'}">
             <!--<i class="iconFont">&#xe608;</i>-->
             <span>自动投标</span>
-            <i class="iconFont">&#xe611;</i>
+            <i class="iconFont right">&#xe611;</i>
           </router-link>
         </li>
         <li>
           <router-link to="/">
             <!--<i class="iconFont">&#xe608;</i>-->
             <span>推荐管理</span>
-            <i class="iconFont">&#xe611;</i>
+            <i class="iconFont right">&#xe611;</i>
           </router-link>
         </li>
         <li>
           <router-link to="/">
             <!--<i class="iconFont">&#xe608;</i>-->
             <span>关于微金</span>
-            <i class="iconFont">&#xe611;</i>
+            <i class="iconFont right">&#xe611;</i>
           </router-link>
         </li>
       </ul>
@@ -277,57 +277,6 @@
         border: 0.0625rem solid #ddd;
         background: none;
       }
-    }
-  }
-
-  .ucMenuList {
-    width: 20rem;
-    ul {
-      margin-top: 0.6rem;
-      background: #fff;
-      li {
-        height: 2.4rem;
-        line-height: 2.4rem;
-        overflow: hidden;
-        color: #666;
-        padding: 0 0.6rem;
-        border-bottom: 0.0625rem solid #eee;
-        &:last-child {
-          border-bottom: 0;
-        }
-        a {
-          display: block;
-          overflow: hidden;
-          font-size: 0.875rem;
-          span {
-            float: left;
-          }
-          .iconFont {
-            float: left;
-            width: 1.8rem;
-            height: 2.4rem;
-            text-align: center;
-            color: #f60;
-            font-size: 1.125rem;
-            &:last-child {
-              float: right;
-              text-align: right;
-              color: #ccc;
-              font-size: 0.75rem;
-            }
-          }
-        }
-      }
-    }
-    .logout {
-      display: block;
-      width: 20rem;
-      height: 2.4rem;
-      margin: 0.6rem 0;
-      background: #fff;
-      color: #f60;
-      text-align: center;
-      line-height: 2.4rem;
     }
   }
 </style>

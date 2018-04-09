@@ -56,12 +56,14 @@
 
 /*form*/
 .public_form { background: #fff;  border-top: 1px solid #eee;  border-bottom: 1px solid #eee;}
+.public_form.mt1 {margin-top: 0.6rem;}
 .public_form ul {  overflow: hidden;}
 .public_form ul li {  height: 2.8rem;  line-height: 2.8rem;  border-bottom: 1px solid #eee;  padding: 0 0.6rem;  font-size: 0.75rem;  position: relative;}
+.public_form ul li.max { height: auto; line-height: 1.4rem; padding: 0.7rem 0.6rem;}
 .public_form ul li:last-child {  border-bottom: 0;  }
 .public_form ul li .txt { width: 5rem;  display: block;  float: left;  }
 .public_form ul li .verifyimg{ position: absolute; top: 0.2rem; right: 0.6rem; width: 5.12rem; height: 2rem; line-height: 2rem; background: #eee; color: #fff; z-index: 10; margin-top: 0.2rem;  }
-.public_form ul li input,.public_form ul li  button ,.public_form ul li  select{ width: 13.8rem; border: 0; height: 1.6rem; border-left: 1px solid #eee; padding-left: 0.6rem;}
+.public_form ul li input,.public_form ul li  button ,.public_form ul li select{ width: 13.8rem; border: 0; height: 1.6rem; border-left: 1px solid #eee; padding-left: 0.6rem; font-size: 0.75rem;}
 .public_form ul li input.btn,.public_form ul li  button.btn {  position: absolute;  top: 0.2rem;  right: 0.6rem;  width: auto;  height: 2rem;  line-height: 2rem;  background: #f60;  border-radius: 1.6rem;  padding: 0 0.8rem;  color: #fff;  z-index: 10;  margin-top: 0.2rem;}
 .public_form ul li input.btn.over,.public_form ul li  button.btn.over { background: #bbb;  }
 
@@ -119,3 +121,20 @@
 
 /*列表提示*/
 .listTips{ width: 20rem; height: 2.4rem; line-height: 2.4rem; background: #f6f6f6; text-align: center; font-size: 0.75rem; color: #999;}
+
+/*展示列表*/
+.ucMenuList {  width: 20rem;}
+.ucMenuList ul{ margin-top: 0.6rem; background: #fff;}
+.ucMenuList ul li { height: 2.4rem; line-height: 2.4rem; overflow: hidden; color: #333; padding: 0 0.6rem; border-bottom: 0.0625rem solid #eee;}
+.ucMenuList ul li:last-child {border-bottom: 0;}
+.ucMenuList ul li a{ display: block; overflow: hidden; font-size: 0.875rem;}
+.ucMenuList ul li span{ float: left;}
+.ucMenuList ul li span em{font-size: 0.75rem; color: #f60;}
+.ucMenuList ul li .iconFont{ float: left; width: 1.8rem; height: 2.4rem; text-align: center; color: #f60; font-size: 1.125rem;}
+.ucMenuList ul li .iconFont.right{float: right; width: auto; text-align: right; color: #ccc; font-size: 0.75rem;}
+.ucMenuList ul li .iconFont.right em{ max-width: 9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; vertical-align: middle;}
+.ucMenuList ul li .iconFont.right em.gray{ color: #999;}
+.ucMenuList ul li .iconFont.right em.nor{ color: #333;}
+.ucMenuList ul li .iconFont.right em.red{ color: #f00;}
+.ucMenuList ul li .iconFont.right em.org{ color: #f60;}
+.ucMenuList .logout { display: block; width: 20rem; height: 2.4rem; margin: 0.6rem 0; background: #fff; color: #f60; text-align: center; line-height: 2.4rem; }

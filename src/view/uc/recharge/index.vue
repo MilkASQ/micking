@@ -1,6 +1,6 @@
 <template>
-  <main>
-    <vhead title="充值" :url="{name:'UC'}" :rightUrl="{name:'UC_RECHARGE_LOG'}" status="true" rightTxt="充值记录"></vhead>
+  <main class="rechargeBox">
+    <vhead title="充值" :url="back" :rightUrl="{name:'UC_RECHARGE_LOG'}" status="true" rightTxt="充值记录"></vhead>
     <div class="public_form mt1">
       <ul>
         <li class="max">
@@ -14,31 +14,39 @@
         </li>
         <li>
           <span class="txt">充值金额</span>
-          <input type="number" name="" v-model="data.money" maxlength="10" placeholder=""/>
+          <input type="number" name="" v-model.number="data.money" maxlength="10" placeholder="请输入充值金额"/>
         </li>
         <li>
           <span class="txt">短信验证码</span>
-          <input type="number" name="" v-model="data.msg" maxlength="6" placeholder=""/>
+          <input type="number" name="" v-model.number="data.verify" maxlength="6" placeholder="请输入短信验证"/>
+          <button class="btn" v-if="show_btn" @click="sendMessage" :disabled="disabled">获取验证码</button>
+          <button class="btn over" :disabled="disabled" v-else>{{ count_down }}s重发</button>
         </li>
       </ul>
     </div>
-    <div class="sumitLine">
+    <div class="submitLine">
       <button type="button" class="submit">立即充值</button>
     </div>
-    <div class="tips" v-html="tips">{{tips}}</div>
+    <div class="tips">
+      <b>温馨提示：</b>
+      <div class="inset" v-html="tips">{{tips}}</div>
+    </div>
   </main>
 </template>
 
 <script>
   import heads from "@/components/vtops"
   import * as unit from "@/assets/js/unit"
+  import imgUrl from "@/assets/images/banklogo/ICBK.png"
+
   export default {
     components: {
       "vhead": heads
     },
     data() {
       return {
-        bankLogo: null,
+        back: null,
+        bankLogo: imgUrl,
         bankName: '工商银行',
         bankNumber: '00000000000009126',
         quota: {
@@ -53,13 +61,17 @@
               </p>`,
         data: {
           money: null,
-          msg: null,
+          verify: null,
           bankCode: null,
+          phone: '18500007357',
         },
+        count_down: null,
+        show_btn: true,
+        disabled: false,
       }
     },
     created() {
-
+      this.back = this.$route.query.redirect || '/uc';
     },
     mounted() {
 
@@ -68,23 +80,80 @@
       lastFourNumber() {
         return unit.subStrString(this.bankNumber, 4);
       },
+      sendMessage() {
+
+        let v = this;
+        if (unit.checkPhone(this.data.phone) === false) {
+          Toast('手机号码格式不正确');
+          return false;
+        }
+
+        // 定时器函数
+        v.count_down = 60;
+        v.disabled = true;
+        let hh = setInterval(doString, 1000);
+        let data = {verify: this.data.verify, phone: this.data.phone};
+
+        function doString() {
+          if (v.count_down === 0) {
+            clearInterval(hh);
+            v.disabled = false;
+            v.show_btn = true;
+          } else {
+            v.count_down = v.count_down - 1;
+            v.show_btn = false;
+          }
+        }
+      },
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  .public_form.mt1 {
-    margin-top: 0.6rem;
-    ul {
-      li {
-        .quota {
-          color: #666;
+  .rechargeBox {
+    .public_form {
+      ul {
+        overflow: hidden;
+        li {
+          .quota {
+            color: #666;
+            margin-top: 0.25rem;
+          }
+          .bankInfos {
+            width: 100%;
+            overflow: hidden;
+            .logo {
+              width: 1.4rem;
+              height: 1.4rem;
+              overflow: hidden;
+              display: inline-block;
+              vertical-align: middle;
+              img {
+                width: inherit;
+                height: inherit;
+                display: block;
+              }
+            }
+            .name {
+              vertical-align: middle;
+              display: inline-block;
+              color: #0095cc;
+              font-size: 0.875rem;
+            }
+          }
         }
-        &.max {
-          height: auto;
-          line-height: 1.4rem;
-          padding: 0.7rem 0.6rem;
-        }
+      }
+    }
+    .submitLine {
+      padding: 0.6rem;
+    }
+    .tips {
+      padding: 1.4rem 0.6rem 0.6rem 0.6rem;
+      line-height: 1.4rem;
+      color: #666;
+      font-size: 0.75rem;
+      b {
+        color: #f60;
       }
     }
   }

@@ -118,15 +118,15 @@
         this.loading = true;
         setTimeout(() => {
           for (let i = 1; i <= 5; i++) {
-          this.list.push({
-            id: i,
-            name: '投标冻结',
-            time: '2018-02-07 15:50:18',
-            impact_money: -50.00,
-            usable_money: 14.28,
-            freeze_money: 50.00,
-            intro: '对3317号标进行投标'
-          });
+            this.list.push({
+              id: i,
+              name: '投标冻结',
+              time: '2018-02-07 15:50:18',
+              impact_money: -50.00,
+              usable_money: 14.28,
+              freeze_money: 50.00,
+              intro: '对3317号标进行投标'
+            });
           }
           this.loading = false;
         }, 1000);
