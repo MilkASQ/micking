@@ -138,3 +138,25 @@
 .ucMenuList ul li .iconFont.right em.red{ color: #f00;}
 .ucMenuList ul li .iconFont.right em.org{ color: #f60;}
 .ucMenuList .logout { display: block; width: 20rem; height: 2.4rem; margin: 0.6rem 0; background: #fff; color: #f60; text-align: center; line-height: 2.4rem; }
+
+
+/*自动投标*/
+.autoBorrowSet { overflow: hidden; }
+.autoBorrowSet .setting { width: 20rem; margin-top: 0.6rem; background: #fff; }
+.autoBorrowSet .setting dl { padding: 1rem 1rem 0 1rem; font-size: 0.875rem; color: #333; }
+.autoBorrowSet .setting dl dt { height: 2rem; line-height: 2rem; }
+.autoBorrowSet .setting dl dd { border-bottom: 0.0625rem solid #eee; padding-bottom: 0.6rem; overflow: hidden; }
+.autoBorrowSet .setting dl:last-child dd { border-bottom: 0; }
+.autoBorrowSet .setting dl dd label { width: 9rem; height: 2rem; line-height: 2rem; display: block; float: left; }
+.autoBorrowSet .setting dl dd label input[type=radio] { width: 0.8rem; height: 0.8rem; outline: none; border: 0.125rem solid #ddd; vertical-align: middle; display: inline-block; margin-right: 0.25rem; border-radius: 0.125rem;  }
+.autoBorrowSet .setting dl dd label input[type=radio]:checked { border-color: #f60; background: #f60; }
+.autoBorrowSet .setting dl dd .editInfo { padding-top: 0.2rem; clear: both; }
+.autoBorrowSet .setting dl dd .editInfo .insetInput { position: relative; display: inline-block; }
+.autoBorrowSet .setting dl dd .editInfo .insetInput input { width: 7rem; height: 1.8rem; border: 0.0625rem solid #ddd; padding: 0 0.25rem; border-radius: 0.25rem; font-size: 0.75rem; }
+.autoBorrowSet .setting dl dd .editInfo .insetInput em { height: 1.8rem; line-height: 1.8rem; color: #333; position: absolute; top: 0; right: 0.3125rem; font-size: 0.75rem; }
+.autoBorrowSet .setting dl dd .editInfo p { color: #999; font-size: 0.75rem; padding-top: 0.4rem; }
+.autoBorrowSet .setting dl dd .multiSelect{}
+.autoBorrowSet .setting dl dd .multiSelect span{ position: relative; height: 1.4rem; line-height: 1.3rem; font-size: 0.75rem; color: #666; padding: 0 0.3rem; display: inline-block; margin: 0 0.25rem 0.25rem 0;}
+.autoBorrowSet .setting dl dd .multiSelect span input[type=checkbox]{ position: absolute; width: 100%; border: #eee 0.0625rem solid; height: 100%; outline: none; left: 0; top: 0; z-index: 1; border-radius: 0.125rem;}
+.autoBorrowSet .setting dl dd .multiSelect span input[type=checkbox]:checked{ color: #f60; border-color: #f60;}
+.autoBorrowSet .setting dl dd .multiSelect span em.on{color: #f60;}
