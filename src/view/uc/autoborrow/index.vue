@@ -8,37 +8,37 @@
     <section class="ucMenuList">
       <ul>
         <li>
-          <router-link :to="{name:'UC_AUTOBORROW_EDIT'}">
+          <router-link :to="{name:'UC_AUTOBORROW_DETAIL'}">
             <span>可用余额</span>
             <i class="iconFont right"><em class="org">{{hasUse}}元</em>&#xe611;</i>
           </router-link>
         </li>
         <li>
-          <router-link :to="{name:'UC_AUTOBORROW_EDIT'}">
+          <router-link :to="{name:'UC_AUTOBORROW_DETAIL'}">
             <span>卡券包</span>
             <i class="iconFont right"><em class="org">{{useCard}}</em>&#xe611;</i>
           </router-link>
         </li>
         <li>
-          <router-link :to="{name:'UC_AUTOBORROW_EDIT'}">
+          <router-link :to="{name:'UC_AUTOBORROW_DETAIL'}">
             <span>单笔投资金额</span>
             <i class="iconFont right"><em class="org">{{rate}}</em>&#xe611;</i>
           </router-link>
         </li>
         <li>
-          <router-link :to="{name:'UC_AUTOBORROW_EDIT'}">
+          <router-link :to="{name:'UC_AUTOBORROW_DETAIL'}">
             <span>预期利率范围</span>
             <i class="iconFont right"><em class="org">{{onesMoney}}</em>&#xe611;</i>
           </router-link>
         </li>
         <li>
-          <router-link :to="{name:'UC_AUTOBORROW_EDIT'}">
+          <router-link :to="{name:'UC_AUTOBORROW_DETAIL'}">
             <span>产品期限范围</span>
             <i class="iconFont right"><em class="org">{{product}}</em>&#xe611;</i>
           </router-link>
         </li>
         <li>
-          <router-link :to="{name:'UC_AUTOBORROW_EDIT'}">
+          <router-link :to="{name:'UC_AUTOBORROW_DETAIL'}">
             <span>还款方式</span>
             <i class="iconFont right"><em class="org">{{ways}}</em>&#xe611;</i>
           </router-link>
@@ -72,7 +72,7 @@
     },
     created() {
       if (this.hasSet === false) {
-        this.$router.push({name: 'UC_AUTOBORROW_ADD'});
+        this.$router.push({name: 'UC_AUTOBORROW_DETAIL'});
       }
     },
     mounted() {

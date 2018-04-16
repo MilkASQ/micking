@@ -2,7 +2,7 @@
   <main>
     <section class="invest_list">
       <div class="invest_item" v-for="item in invest">
-          <router-link :to="item.url">
+          <router-link :to="{name:'INVEST_DETAIL',params:{id:item.id},query:{url:'/invest/student'}}">
             <div class="name">
               <span>{{item.name}}</span>
               <span class="newer" v-if="item.is_newer">新手标</span>

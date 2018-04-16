@@ -6,7 +6,7 @@
           <div class="top">
             <div class="topLeft">
               <p class="name">{{item.name}}</p>
-              <p class="time">{{item.time}}</p>
+              <p class="time">有效期至{{item.time}}</p>
             </div>
             <div class="money">￥<em>{{item.money}}</em></div>
           </div>
@@ -41,14 +41,14 @@
           id: 1,
           name: '新手注册红包',
           money: 78,
-          time: '有效期至2018-04-25',
+          time: '2018-04-25',
           invest_date: '标的期限≥45天',
           invest_money: '投资金额≥20000.00元'
         },
         {
           id: 1, name: '新手注册红包',
           money: 118,
-          time: '有效期至2018-04-25',
+          time: '2018-04-25',
           invest_date: '标的期限≥45天',
           invest_money: '投资金额≥30000.00元'
         },
@@ -56,7 +56,7 @@
           id: 1,
           name: '新手注册红包',
           money: 218,
-          time: '有效期至2018-04-25',
+          time: '2018-04-25',
           invest_date: '标的期限≥45天',
           invest_money: '投资金额≥50000.00元'
         });

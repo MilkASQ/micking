@@ -80,14 +80,14 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/">
+          <router-link :to="{name:'UC_PROMOTION'}">
             <!--<i class="iconFont">&#xe608;</i>-->
-            <span>推荐管理</span>
+            <span>邀请有礼</span>
             <i class="iconFont right">&#xe611;</i>
           </router-link>
         </li>
         <li>
-          <router-link to="/">
+          <router-link :to="{name:'ABOUT',query: {redirect: '/uc',type:23}}">
             <!--<i class="iconFont">&#xe608;</i>-->
             <span>关于微金</span>
             <i class="iconFont right">&#xe611;</i>

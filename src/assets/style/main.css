@@ -118,7 +118,8 @@
 .new_bonusList li.over{background: #fff url(../images/card_left_o.jpg) repeat-y; background-size: 0.4rem;}
 .new_bonusList li.over .top .name,.new_bonusList li.over .btn{border-color: #ddd;}
 .new_bonusList li.over .bottom,.new_bonusList li.over .btn,.new_bonusList li.over .money,.new_bonusList li.over .top .name{ color: #999;}
-
+.new_bonusList li .checkRadio{ position: absolute; top: 1.5rem; right: 1rem; width: 1rem; height: 1rem; outline: none; background: #fff; border:0.125rem solid #ddd; border-radius: 0.5rem; overflow: hidden;}
+.new_bonusList li .checkRadio:checked{border-color: #f60; background: #f60;}
 /*列表提示*/
 .listTips{ width: 20rem; height: 2.4rem; line-height: 2.4rem; background: #f6f6f6; text-align: center; font-size: 0.75rem; color: #999;}
 
@@ -138,3 +139,41 @@
 .ucMenuList ul li .iconFont.right em.red{ color: #f00;}
 .ucMenuList ul li .iconFont.right em.org{ color: #f60;}
 .ucMenuList .logout { display: block; width: 20rem; height: 2.4rem; margin: 0.6rem 0; background: #fff; color: #f60; text-align: center; line-height: 2.4rem; }
+
+
+/*自动投标*/
+.autoBorrowSet { overflow: hidden; }
+.autoBorrowSet .setting { width: 20rem; margin-top: 0.6rem; background: #fff; }
+.autoBorrowSet .setting dl { padding: 1rem 1rem 0 1rem; font-size: 0.875rem; color: #333; }
+.autoBorrowSet .setting dl dt { height: 2rem; line-height: 2rem; }
+.autoBorrowSet .setting dl dd { border-bottom: 0.0625rem solid #eee; padding-bottom: 0.6rem; overflow: hidden; }
+.autoBorrowSet .setting dl:last-child dd { border-bottom: 0; }
+.autoBorrowSet .setting dl dd label { width: 9rem; height: 2rem; line-height: 2rem; display: block; float: left; }
+.autoBorrowSet .setting dl dd label input[type=radio] { width: 0.8rem; height: 0.8rem; outline: none; border: 0.125rem solid #ddd; vertical-align: middle; display: inline-block; margin-right: 0.25rem; border-radius: 0.125rem;  }
+.autoBorrowSet .setting dl dd label input[type=radio]:checked { border-color: #f60; background: #f60; }
+.autoBorrowSet .setting dl dd .editInfo { padding-top: 0.2rem; clear: both; }
+.autoBorrowSet .setting dl dd .editInfo .insetInput { position: relative; display: inline-block; }
+.autoBorrowSet .setting dl dd .editInfo .insetInput input { width: 7rem; height: 1.8rem; border: 0.0625rem solid #ddd; padding: 0 0.25rem; border-radius: 0.25rem; font-size: 0.75rem; }
+.autoBorrowSet .setting dl dd .editInfo .insetInput em { height: 1.8rem; line-height: 1.8rem; color: #333; position: absolute; top: 0; right: 0.3125rem; font-size: 0.75rem; }
+.autoBorrowSet .setting dl dd .editInfo p { color: #999; font-size: 0.75rem; padding-top: 0.4rem; }
+.autoBorrowSet .setting dl dd .multiSelect{}
+.autoBorrowSet .setting dl dd .multiSelect span{ position: relative; height: 1.4rem; line-height: 1.3rem; font-size: 0.75rem; color: #666; padding: 0 0.3rem; display: inline-block; margin: 0 0.25rem 0.25rem 0;}
+.autoBorrowSet .setting dl dd .multiSelect span input[type=checkbox]{ position: absolute; width: 100%; border: #eee 0.0625rem solid; height: 100%; outline: none; left: 0; top: 0; z-index: 1; border-radius: 0.125rem;}
+.autoBorrowSet .setting dl dd .multiSelect span input[type=checkbox]:checked{ color: #f60; border-color: #f60;}
+.autoBorrowSet .setting dl dd .multiSelect span em.on{color: #f60;}
+
+.tableBorder { border-left: 1px solid #eee; border-top: 1px solid #eee; width: 100%; margin-top: 0.6rem;}
+.tableBorder td,.tableBorder th { font-size: 0.75rem; line-height: 1.2rem; border-right: 0.0625rem  solid #eee; border-bottom: 0.0625rem solid #eee; font-weight: normal; text-align: center;  }
+.tableBorder td {color: #666;}
+
+/*底部弹窗*/
+.publicBottomPopup{ overflow: hidden; height: 0;}
+.publicBottomPopup .background{width: 20rem; height: 100%; position: fixed; left: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 1;}
+.publicBottomPopup .inset{ width: 20rem; background: #fcfcfc; height: auto; position: fixed; bottom: -100%; left: 0; z-index: 2;}
+.publicBottomPopup .inset.int{ bottom: 0; transition: bottom 0.35s; }
+.publicBottomPopup .inset.out{ bottom: -100%; transition: bottom 0.35s; }
+.publicBottomPopup .inset .title{height: 2.4rem; color: #666; line-height: 2.4rem; border-bottom: 0.0625rem solid #eee; padding: 0 1rem;}
+.publicBottomPopup .inset .title button{ background: none; border:0; color: #333; outline: none; display: block; float: left; width: 2.4rem; height: 2.4rem;}
+.publicBottomPopup .inset .title .name{ width: 13.2rem; float: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: center;}
+.publicBottomPopup .inset .content{ padding: 0 0 0.6rem 0;}
+.publicBottomPopup .inset .content .new_bonusList{ overflow-y:auto; height: 18.6125rem;}

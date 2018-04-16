@@ -3,7 +3,7 @@
     <mt-loadmore :top-method="loadTop" :bottom-all-loaded="allLoaded" ref="loadmore">
       <section class="invest_list" v-if="invest.length > 0" v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="10">
         <div class="invest_item" v-for="item in invest">
-          <router-link :to="item.url">
+          <router-link :to="{name:'INVEST_DETAIL',params:{id:item.id},query:{url:'/invest/wealth'}}">
             <div class="name">
               <span>{{item.name}}</span>
               <span class="newer" v-if="item.is_newer">新手标</span>
@@ -47,9 +47,9 @@
         invest: [
           {id: 201, url: "/", name: '微 · 车贷NO.3006', is_newer: false, number: 13.50, days: 55, percen: 65.50},
           {id: 202, url: "/", name: '微 · 车贷NO.3007', is_newer: false, number: 14.50, days: 105, percen: 35.50},{id: 201, url: "/", name: '微 · 车贷NO.3006', is_newer: false, number: 13.50, days: 55, percen: 65.50},
-          {id: 202, url: "/", name: '微 · 车贷NO.3007', is_newer: false, number: 14.50, days: 105, percen: 35.50},{id: 201, url: "/", name: '微 · 车贷NO.3006', is_newer: false, number: 13.50, days: 55, percen: 65.50},
-          {id: 202, url: "/", name: '微 · 车贷NO.3007', is_newer: false, number: 14.50, days: 105, percen: 35.50},{id: 201, url: "/", name: '微 · 车贷NO.3006', is_newer: false, number: 13.50, days: 55, percen: 65.50},
-          {id: 202, url: "/", name: '微 · 车贷NO.3007', is_newer: false, number: 14.50, days: 105, percen: 35.50},
+          {id: 203, url: "/", name: '微 · 车贷NO.3007', is_newer: false, number: 14.50, days: 105, percen: 35.50},{id: 201, url: "/", name: '微 · 车贷NO.3006', is_newer: false, number: 13.50, days: 55, percen: 65.50},
+          {id: 204, url: "/", name: '微 · 车贷NO.3007', is_newer: false, number: 14.50, days: 105, percen: 35.50},{id: 201, url: "/", name: '微 · 车贷NO.3006', is_newer: false, number: 13.50, days: 55, percen: 65.50},
+          {id: 205, url: "/", name: '微 · 车贷NO.3007', is_newer: false, number: 14.50, days: 105, percen: 35.50},
         ]
       }
     },
