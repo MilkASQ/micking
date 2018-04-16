@@ -69,6 +69,15 @@ let routes = [
     meta: {requireAuth: false}
   },
 
+  {
+    path: '/test',
+    name: 'TEST', // 关于我们
+    component: function (resolve) {
+      require(['@/view/index/test/index'], resolve)
+    },
+    meta: {requireAuth: false}
+  },
+
 
   // uc
   {
