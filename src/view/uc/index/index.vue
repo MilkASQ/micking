@@ -93,12 +93,6 @@
             <i class="iconFont right">&#xe611;</i>
           </router-link>
         </li>
-        <li>
-          <router-link :to="{name:'TEST'}">
-            <span>测试</span>
-            <i class="iconFont right">&#xe611;</i>
-          </router-link>
-        </li>
       </ul>
       <span @click="logout" class="logout">退出登录</span>
     </section>

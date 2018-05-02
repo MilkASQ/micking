@@ -1,6 +1,6 @@
 <template>
   <main class="autoBorrowSet">
-    <vhead title="设置自动投标" :url="{name:'UC_AUTOBORROW'}" :rightUrl="{name:'RULES',query: {redirect: '/uc/autoborrow/add',type:22}}" status="true" rightTxt="规则"></vhead>
+    <vhead title="设置自动投标" :url="{name:'UC_AUTOBORROW'}" :rightUrl="{name:'RULES',query: {redirect: '/uc/autoborrow/detail',type:22}}" status="true" rightTxt="规则"></vhead>
     <section class="ucMenuList">
       <ul>
         <li>
